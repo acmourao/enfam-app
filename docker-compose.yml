@@ -16,7 +16,7 @@ services:
      volumes:
          - ./php_code/:/var/www/html/
 
-   db:    
+   mysql:    
      build: ./mysql/
      container_name: mysql
      ports:
