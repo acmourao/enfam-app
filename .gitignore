@@ -5,3 +5,4 @@
 !/php_code
 !docker-compose.yml
 !.gitignore
+# exclui tudo menos as pastas do sistema e arquivo de controle git/compose 
