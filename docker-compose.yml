@@ -22,7 +22,7 @@ services:
         - ./mysql-data/:/var/lib/mysql
      environment:  
        MYSQL_ROOT_PASSWORD: root
-       MYSQL_DATABASE: sys 
+       MYSQL_DATABASE: educaenfam
 
 volumes:
     mysql-data:
