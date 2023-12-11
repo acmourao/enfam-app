@@ -6,7 +6,7 @@
     </head>
     <body>
     <?php
-        include 'usuarios.php';
+        require dirname(__FILE__) . '/usuarios.php';
 
         $result = new Dao();
 
