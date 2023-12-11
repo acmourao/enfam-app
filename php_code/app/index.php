@@ -8,8 +8,8 @@
 
 <body>
     <?php
-    require dirname(__FILE__) . '/../dao/usuarios.php';
-    
+    require '../dao/usuarios.php';
+
     $result = new Dao();
 
     //      foreach($result->buscaUser('andersson moura') as $row){

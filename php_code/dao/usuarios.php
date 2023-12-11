@@ -1,6 +1,6 @@
 <?php
 
-require dirname(__FILE__) . '/../db/database.php';
+require '../db/database.php';
 
 class Dao extends ConnectaDb {
 
