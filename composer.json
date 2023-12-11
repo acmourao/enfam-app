@@ -1,0 +1,17 @@
+{
+    "name": "amourao/enfam-app",
+    "autoload": {
+        "psr-4": {
+            "app\\": "app/",
+            "dao\\": "dao/",
+            "db\\": "db/"
+        }
+    },
+    "authors": [
+        {
+            "name": "acmourao",
+            "email": "amourao@stj.jus.br"
+        }
+    ],
+    "require": {}
+}
