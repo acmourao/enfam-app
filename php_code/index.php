@@ -1,17 +1,22 @@
 <?php
-require 'modelo.php';
+include 'usuarios.php';
 ?>
 <!doctype html>
 <html>
     <head>
-        <title>Teste Lista Usuários com Store Procedure</title>
+        <title>Teste Lista Usuários com Store Procedures</title>
         <meta charset="UTF-8">
     </head>
     <body>
     <?php
-        foreach($result as $row){
-            printf("%s %s <br/>", $row['id'], $row['nome']);
+
+        $result = new Dao();
+
+//      foreach($result->buscaUser('andersson moura') as $row){
+        foreach($result->buscaAllUsers() as $row){
+            printf("%s %s %s <br/>", $row['id'], $row['nome'], $row['email']);
         }
+        $result = null;
     ?>
     </body>
 </html>
