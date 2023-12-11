@@ -1,6 +1,6 @@
 <?php
 
-include_once 'database.php';
+include 'database.php';
 
 class Dao extends ConnectaDb {
 

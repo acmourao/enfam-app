@@ -14,9 +14,10 @@ class ConnectaDb extends PDO {
         try {
             parent::__construct($this->dsn, $this->user, $this->password, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
             $this->setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND, "SET NAMES 'utf8'");
-		    //echo "Connected to the database successfully!<br/><br/>";       
+		    echo "Connected to the database successfully!<br/><br/>";       
         } catch (PDOException $e) {
             die($e->getMessage());
         }
     }
+
 }

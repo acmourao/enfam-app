@@ -1,6 +1,3 @@
-<?php
-include 'usuarios.php';
-?>
 <!doctype html>
 <html>
     <head>
@@ -9,6 +6,7 @@ include 'usuarios.php';
     </head>
     <body>
     <?php
+        include 'usuarios.php';
 
         $result = new Dao();
 
