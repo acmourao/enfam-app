@@ -1,3 +1,9 @@
+<!--
+//?php
+//namespace php_code\app;
+//use php_code\dao\DataObj;
+//$lista = new DataObj();
+//?-->
 <!doctype html>
 <html>
 
@@ -9,14 +15,12 @@
 <body>
     <?php
     require '../dao/usuarios.php';
-
-    $result = new Dao();
-
+    $lista = new DataObj();
     //      foreach($result->buscaUser('andersson moura') as $row){
-    foreach ($result->buscaAllUsers() as $row) {
+    foreach ($lista->buscaAllUsers() as $row) {
         printf("%s %s %s <br/>", $row['id'], $row['nome'], $row['email']);
     }
-    $result = null;
+    $lista = null;
     ?>
 </body>
 

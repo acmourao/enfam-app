@@ -1,25 +1,29 @@
 <?php
 
+//namespace php_code\dao;
+//use php_code\db\ConnectaDb;
+
 require '../db/database.php';
 
-class Dao extends ConnectaDb {
+class DataObj extends ConnectaDb
+{
 
-    public function __construct() {
+    public function __construct()
+    {
         parent::__construct();
     }
 
-    public function buscaAllUsers() {
+    public function buscaAllUsers()
+    {
         $stmt = parent::query("SELECT * FROM educaenfam.vwUsuarios");
-        $stmt->execute();        
+        $stmt->execute();
         return $stmt->fetchAll();
     }
 
-    public function buscaUser($nome) {
-            $stmt = parent::prepare("call buscaUser(?)");
-            $stmt->execute([$nome]);        
-            return $stmt->fetchAll();
+    public function buscaUser($nome)
+    {
+        $stmt = parent::prepare("call buscaUser(?)");
+        $stmt->execute([$nome]);
+        return $stmt->fetchAll();
     }
-
 }
-
-?>
