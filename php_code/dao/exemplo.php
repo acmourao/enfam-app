@@ -1,20 +1,18 @@
 <?php
 
 namespace php_code\dao;
+
 use php_code\app\Teste;
 
 class Exemplo
 {
     public static function exemplo()
     {
-        return "Teste!!!";
+        return "Teste 2!!!";
     }
 }
 
+//$tmp = new Teste();
+//echo ($tmp->msg);
+
 echo Exemplo::exemplo();
-
-$tmp = new Teste();
-
-echo ($tmp->msg);
-
-?>

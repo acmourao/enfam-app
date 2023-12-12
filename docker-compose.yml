@@ -8,14 +8,6 @@ services:
      volumes:
          - ./php_code/:/var/www/html/
 
-   php:
-     build: ./php_code/
-     container_name: php
-     expose:
-       - 9000
-     volumes:
-         - ./php_code/:/var/www/html/
-
    mysql:    
      build: ./mysql/
      container_name: mysql

@@ -1,2 +1,2 @@
 FROM acmourao/educaenfam-nginx
-COPY ./default.conf /etc/nginx/conf.d/default.conf
+CMD "/etc/init.d/php8.2-fpm start"
