@@ -1,1 +1,1 @@
-FROM acmourao/educaenfam-php
+FROM bitnami/php-fpm:latest
