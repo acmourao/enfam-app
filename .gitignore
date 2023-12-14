@@ -2,11 +2,8 @@
 /*
 !/mysql
 !/nginx
-!/php_code
+!/develop
 !docker-compose.yml
 !.gitignore
 !composer.json
-!/app/
-!/dao/
-!/db/
 # exclui tudo menos as pastas do sistema e arquivo de controle git/compose 

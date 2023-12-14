@@ -1,23 +1,29 @@
 version: "3.9"
 services:
-   nginx:
-     build: ./nginx/
-     container_name: nginx
-     ports:
-       - 80:80
-     volumes:
-         - ./php_code/:/var/www/html/
+  nginx:
+    build: ./nginx/
+    container_name: nginx
+    ports:
+      - 80:80
+    volumes:
+      - ./php_code/:/var/www/html/
 
-   mysql:    
-     build: ./mysql/
-     container_name: mysql
-     ports:
-       - 3306:3306
-     volumes: 
-        - ./mysql-data/:/var/lib/mysql
-     environment:  
-       MYSQL_ROOT_PASSWORD: root
-       MYSQL_DATABASE: educaenfam
+  php:
+    build: ./php/
+    container_name: php
+    expose:
+      - 9000
+
+  mysql:
+    build: ./mysql/
+    container_name: mysql
+    ports:
+      - 3306:3306
+    volumes:
+      - ./mysql-data/:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: educaenfam
 
 volumes:
-    mysql-data:
+  mysql-data:
