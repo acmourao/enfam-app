@@ -1,1 +1,1 @@
-FROM bitnami/php-fpm:latest
+FROM bitnami/php-fpm
