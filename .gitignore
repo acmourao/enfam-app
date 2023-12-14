@@ -3,6 +3,7 @@
 !/mysql
 !/nginx
 !/develop
+!/php
 !docker-compose.yml
 !.gitignore
 !composer.json
