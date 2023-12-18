@@ -1,9 +1,9 @@
 <?php
 
-//namespace php_code\dao;
-//use php_code\db\ConnectaDb;
+require "../db/database.php";
 
-require '../db/database.php';
+// namespace develop\dao;
+// use develop\db\ConnectaDb;
 
 class DataObj extends ConnectaDb
 {

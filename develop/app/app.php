@@ -1,6 +1,6 @@
 <?php
 
-namespace php_code\app;
+namespace develop\app;
 
 class Teste
 {
@@ -23,4 +23,7 @@ class Teste
         return $this->msg;
     }
 }
-?>
+
+$retorno = new Teste();
+
+echo $retorno->get_msg();

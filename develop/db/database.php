@@ -1,7 +1,8 @@
 <?php
-//namespace php_code\db;
-//use PDO;
-//use PDOException;
+
+// namespace develop\db;
+// use PDO;
+// use PDOException;
 
 class ConnectaDb extends PDO
 {

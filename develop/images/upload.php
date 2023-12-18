@@ -4,13 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Upload de Fotos</title>
 </head>
 
 <body>
-    <h2>
-        Olá mundo -- teste 12!!!
-    </h2>
+    Upload de Fotos
 </body>
 
 </html>
