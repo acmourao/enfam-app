@@ -1,9 +1,10 @@
 <?php
 
-require "../dao/usuarios.php";
+namespace app;
 
-// namespace develop\app;
-// use develop\dao\DataObj;
+use dao\DataObj;
+
+//require "../dao/usuarios.php";
 
 $lista = new DataObj();
 

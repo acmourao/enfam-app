@@ -1,7 +1,5 @@
 <?php
 
-namespace develop\dao;
-
 class Exemplo
 {
     public static function exemplo()

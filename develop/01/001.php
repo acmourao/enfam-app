@@ -1,7 +1,5 @@
 <?php
 
-namespace develop\app;
-
 class Teste
 {
     // Properties
