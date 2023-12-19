@@ -4,7 +4,7 @@ namespace app;
 
 use dao\DataObj;
 
-//require "../dao/usuarios.php";
+require "../dao/usuarios.php";
 
 $lista = new DataObj();
 

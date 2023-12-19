@@ -4,27 +4,22 @@ namespace dao;
 
 use db\ConnectaDb;
 
-//require "../db/database.php";
+require_once "../db/database.php";
 
 class DataObj extends ConnectaDb
 {
-
-    public function __construct()
-    {
-        parent::__construct();
-    }
-
     public function buscaAllUsers()
     {
-        $stmt = parent::query("SELECT * FROM educaenfam.vwUsuarios");
-        $stmt->execute();
-        return $stmt->fetchAll();
+        return parent::recuperaQuery("SELECT * FROM educaenfam.vwUsuarios");
     }
 
     public function buscaUser($nome)
     {
-        $stmt = parent::prepare("call buscaUser(?)");
-        $stmt->execute([$nome]);
-        return $stmt->fetchAll();
+        return parent::parametrosQuery("call buscaUser(?)", $nome);
+    }
+
+    public function insertUser($json)
+    {
+        return parent::parametrosQuery("call insertUser(?)", $json);
     }
 }

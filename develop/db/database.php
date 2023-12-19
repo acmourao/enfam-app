@@ -25,4 +25,18 @@ class ConnectaDb extends PDO
             die($e->getMessage());
         }
     }
+
+    public function recuperaQuery($qry)
+    {
+        $stmt = parent::query($qry);
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
+
+    public function parametrosQuery($qry, $param)
+    {
+        $stmt = parent::prepare($qry);
+        $stmt->execute([$param]);
+        return $stmt->fetchAll();
+    }
 }
