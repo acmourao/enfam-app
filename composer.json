@@ -2,9 +2,9 @@
     "name": "amourao/enfam-app",
     "autoload": {
         "psr-4": {
-            "develop\\app\\": "develop/app",
-            "develop\\dao\\": "develop/dao",
-            "develop\\db\\": "develop/db"
+            "develop\\app\\": "app",
+            "develop\\dao\\": "dao",
+            "develop\\db\\": "db"
         }
     },
     "authors": [
