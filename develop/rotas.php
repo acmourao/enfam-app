@@ -1,151 +1,154 @@
 <?php
 
-use App\Controller\{ DashboardController, LoginController, 
-                    ProdutoController, CategoriaController, 
-                    UsuarioController, UsuarioGrupoController };
+use App\Controller\{
+    DashboardController,
+    LoginController,
+    ProdutoController,
+    CategoriaController,
+    UsuarioController,
+    UsuarioGrupoController
+};
 
 try {
 
-    switch($uri_parse)
-    {
-        // Tela inicial.
+    switch ($uri_parse) {
+            // Tela inicial.
         case '/':
             DashboardController::index();
-        break;
+            break;
 
-        
-        // Rotas para trabalhar com Login
+
+            // Rotas para trabalhar com Login
         case '/login':
             LoginController::login();
-        break;
+            break;
 
         case '/autenticar':
             LoginController::autenticar();
-        break;
+            break;
 
         case '/esqueci-a-senha':
             LoginController::esqueciSenha();
-        break;
+            break;
 
         case '/enviar-nova-senha':
             LoginController::enviarNovaSenha();
-        break;
+            break;
 
         case '/sair':
             LoginController::sair();
-        break;
+            break;
 
 
-        // Rotas para trabalhar com o usuário
+            // Rotas para trabalhar com o usuário
         case '/usuario':
             UsuarioController::index();
-        break;
+            break;
 
         case '/usuario/cadastrar':
             UsuarioController::cadastrar();
-        break;
+            break;
 
         case '/usuario/salvar':
             UsuarioController::salvar();
-        break;
+            break;
 
         case '/usuario/ver':
             UsuarioController::ver();
-        break;
+            break;
 
         case '/usuario/excluir':
             UsuarioController::excluir();
-        break;
+            break;
 
-        case '/usuario/meus-dados':            
+        case '/usuario/meus-dados':
             UsuarioController::meusDados();
-        break;
+            break;
 
         case '/usuario/meus-dados/salvar':
             UsuarioController::meusDadosSalvar();
-        break;
-
-        
+            break;
 
 
-        // Rotas para trabalhar com grupo de usuário
+
+
+            // Rotas para trabalhar com grupo de usuário
         case '/usuario/grupo':
             UsuarioGrupoController::index();
-        break;
+            break;
 
         case '/usuario/grupo/ver':
             UsuarioGrupoController::ver();
-        break;
+            break;
 
         case '/usuario/grupo/cadastrar':
             UsuarioGrupoController::cadastrar();
-        break;
+            break;
 
         case '/usuario/grupo/salvar':
             UsuarioGrupoController::salvar();
-        break;
+            break;
 
         case '/usuario/grupo/excluir':
             UsuarioGrupoController::excluir();
-        break;
+            break;
 
 
 
 
-        // Rotas para trabalhar com produtos.
-        case '/produto':       
+            // Rotas para trabalhar com produtos.
+        case '/produto':
             ProdutoController::index();
-        break;
+            break;
 
         case '/produto/cadastrar':
             ProdutoController::cadastrar();
-        break;
+            break;
 
         case '/produto/salvar':
             ProdutoController::salvar();
-        break;
+            break;
 
         case '/produto/ver':
-            ProdutoController::ver();                              
-        break;
+            ProdutoController::ver();
+            break;
 
         case '/produto/excluir':
             ProdutoController::excluir();
-        break;
+            break;
 
 
 
-        // Rotas para trabalhar com categorias
-        case '/categoria':            
-            CategoriaController::index();            
-        break;
+            // Rotas para trabalhar com categorias
+        case '/categoria':
+            CategoriaController::index();
+            break;
 
-        case '/categoria/cadastrar':           
+        case '/categoria/cadastrar':
             CategoriaController::cadastrar();
-        break;
+            break;
 
         case '/categoria/salvar':
             CategoriaController::salvar();
-        break;
+            break;
 
         case '/categoria/ver':
-            CategoriaController::ver();                       
-        break;
+            CategoriaController::ver();
+            break;
 
         case '/categoria/excluir':
             CategoriaController::excluir();
-        break;
+            break;
 
 
 
-        
+
 
         default:
             echo "Rota inválida";
-           //   echo $uri_parse;
-        break;
+            //   echo $uri_parse;
+            break;
     }
-
-} catch(Exception $e) {
-    echo "Deu ruim " . $e->getMessage();
+} catch (Exception $e) {
+    echo "Erro do Sistema ::: " . $e->getMessage();
 }

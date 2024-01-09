@@ -1,10 +1,8 @@
 <?php
 
-namespace dao;
+namespace App\Model;
 
-use db\ConnectaDb;
-
-require_once "../db/database.php";
+use App\DAO\ConnectaDb;
 
 class DataObj extends ConnectaDb
 {

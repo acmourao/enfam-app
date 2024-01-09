@@ -4,12 +4,13 @@ namespace App\DAO;
 
 use \PDO;
 
-class MySQL extends PDO {
+class MySQL extends PDO
+{
 
     private $host    = "localhost";
     private $usuario = "root";
-    private $senha   = "@MySQL_dev_2020";
-    private $db      = "sistema_revisao";
+    private $senha   = "root";
+    private $db      = "educaenfam";
 
     private $opcoes = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
 
@@ -20,7 +21,6 @@ class MySQL extends PDO {
         $dsn = "mysql:host=" . $this->host . ";dbname=" . $this->db;
 
         // PHP Data Object
-        return parent::__construct($dsn, $this->usuario, $this->senha, $this->opcoes);    
+        return parent::__construct($dsn, $this->usuario, $this->senha, $this->opcoes);
     }
 }
-

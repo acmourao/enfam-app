@@ -1,10 +1,6 @@
 <?php
 
-namespace app;
-
-use dao\DataObj;
-
-require "../dao/usuarios.php";
+use App\Model\DataObj;
 
 $lista = new DataObj();
 

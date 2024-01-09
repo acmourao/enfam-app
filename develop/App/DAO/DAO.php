@@ -1,8 +1,9 @@
 <?php
 
-namespace App\DAO;
+namespace DAO;
 
-abstract class DAO {
+abstract class DAO
+{
 
     protected $conexao;
 
