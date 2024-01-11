@@ -15,9 +15,4 @@ class DataObj extends ConnectaDb
     {
         return parent::parametrosQuery("call buscaUser(?)", $nome);
     }
-
-    public function insertUser($json)
-    {
-        return parent::parametrosQuery("call insertUser(?)", $json);
-    }
 }
