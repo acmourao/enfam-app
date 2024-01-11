@@ -8,17 +8,8 @@ abstract class Controller
     protected static function isProtected()
     {
 
-        if (!isset($_SESSION["usuario_logado"]))
-            header("Location: /login");
+        //if (!isset($_SESSION["usuario_logado"]))
+        //    header("Location: /login");
 
-
-        if (self::hasPermission()) {
-            echo "usuário logado com sucesso!";
-        }
-    }
-
-    private static function hasPermission()
-    {
-        return true; // voltamos mais tarde.
     }
 }

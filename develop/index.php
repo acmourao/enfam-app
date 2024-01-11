@@ -8,6 +8,4 @@ include 'config.php';
 
 include 'Autoload.php';
 
-//include 'rotas.php';
-
-include 'app.php';
+include 'rotas.php';

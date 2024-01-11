@@ -15,4 +15,4 @@ $b = isset($_GET['nome']) && is_string($_GET['nome']) ? $_GET['nome'] : 'vazio';
 
 echo $b . '<br><hr>';
 
-echo '<a href="/curso/004.php">Voltar</a>';
+echo '<a href="/exemplos">Voltar</a>';
