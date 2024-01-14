@@ -26,3 +26,6 @@ alias drmi='docker rmi -f $(sudo docker images -qa) && docker volume rm $(docker
 alias dvl='docker volume ls'
 alias dmg='docker images'
 alias ns='netstat -na | more'
+alias nginx='sudo docker exec -it nginx bash'
+alias dstart='docker start $(sudo docker ps -qa)'
+alias dstop='docker stop $(sudo docker ps -qa)'
