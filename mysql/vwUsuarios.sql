@@ -11,4 +11,3 @@ VIEW `vwUsuarios` AS
         `usuarios`.`telefone` AS `telefone`
     FROM
         `usuarios`
-    LIMIT 100

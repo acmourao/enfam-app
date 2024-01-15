@@ -3,7 +3,7 @@
 <main class="container mt-3">
 
     <h4>
-        Lista de Usuários (100)
+        Lista de Usuários (100 primeiros)
     </h4>
 
     <table class="table table-hover mt-3">
