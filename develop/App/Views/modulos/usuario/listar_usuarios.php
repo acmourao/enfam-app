@@ -17,7 +17,7 @@
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($lista->buscaAllUsers() as $row) : ?>
+            <?php foreach ($lista as $row) : ?>
                 <tr>
                     <td> <?= $row['id'] ?> </td>
                     <td> <?= $row['nome'] ?> </td>

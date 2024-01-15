@@ -2,13 +2,29 @@
 
 namespace App\DAO;
 
-abstract class DAO
+use App\DAO\Conexao;
+
+
+class DAO
 {
+    private static $conn;
 
-    protected $conexao;
-
-    public function __construct()
+    function __construct()
     {
-        $this->conexao = new MySQL();
+        self::$conn = Conexao::getInstance();
+    }
+
+    function recuperaQuery($qry)
+    {
+        $stmt = self::$conn->query($qry);
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
+
+    function parametrosQuery($qry, $param)
+    {
+        $stmt = self::$conn->prepare($qry);
+        $stmt->execute([$param]);
+        return $stmt->fetchAll();
     }
 }

@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Model\DataObj;
+use App\DAO\UsuarioDAO;
 
 class UsuarioController extends Controller
 {
@@ -10,7 +10,8 @@ class UsuarioController extends Controller
     {
         parent::isProtected();
 
-        $lista = new DataObj();
+        $usr = new UsuarioDAO;
+        $lista = $usr->getAllRows();
 
         include PATH_VIEW . 'modulos/usuario/listar_usuarios.php';
     }
