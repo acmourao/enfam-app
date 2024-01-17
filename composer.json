@@ -2,13 +2,13 @@
     "name": "amourao/enfam-app",
     "autoload": {
         "psr-4": {
-            "develop\\App\\": "App"
+            "App\\": "App"
         }
     },
     "authors": [
         {
             "name": "acmourao",
-            "email": "amourao@stj.jus.br"
+            "email": "amourao@gmail.com"
         }
     ],
     "require": {}
