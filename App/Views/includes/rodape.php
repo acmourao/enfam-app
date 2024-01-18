@@ -1,6 +1,14 @@
-<footer class="container mt-5">
-    <div class="text-center">
-        <p><?php echo NOME_APP . " -- " . VER_APP . " -- " . date('Y m d H:i:s', $_SESSION['time']); ?></p>
+<footer>
+    <div class="container p-1 my-1 bg-dark text-white">
+        <span class="badge">
+            <?php echo date('Y m d H:i:s', $_SESSION['time']); ?></p>
+        </span>
+        <span class="badge bg-primary">
+            <?php echo NOME_APP; ?>
+        </span>
+        <span class="badge bg-success">
+            <?php echo VER_APP; ?>
+        </span>
     </div>
 </footer>
 </body>

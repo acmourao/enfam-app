@@ -6,6 +6,8 @@ use Controller\{
     UsuarioController
 };
 
+//echo $_SESSION['count'] += 1;
+
 try {
     switch ($uri_parse) {
             // Rotas para serviços de usuários
