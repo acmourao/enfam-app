@@ -1,8 +1,8 @@
 <?php
 try {
 
-    $dsn = "mysql:host=127.0.0.1:3306;dbname=educaenfam";
-    $conexao = new PDO($dsn, 'userapp', 'admin123');
+    $dsn = "mysql:host=localhost:3306;dbname=educaenfam";
+    $conexao = new PDO($dsn, 'educaenfam', 'educaenfam');
 
     // $conexao->beginTransaction();
 

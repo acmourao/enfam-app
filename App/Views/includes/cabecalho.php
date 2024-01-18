@@ -5,10 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>W3 Bootstrap 3 Example</title>
-    <?php include PATH_VIEW . 'includes/css_config.php' ?>
-
-    <?php include PATH_VIEW . 'includes/js_config.php' ?>
-
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
@@ -35,7 +33,8 @@
                                 <a class="nav-link" href="#">Configurações</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="https://www.enfam.jus.br/institucional/sobre-a-escola/">Contato</a>
+                                <a class="nav-link"
+                                    href="https://www.enfam.jus.br/institucional/sobre-a-escola/">Contato</a>
                             </li>
                         </ul>
                     </div>

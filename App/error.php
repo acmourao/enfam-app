@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <h1>Página não encontrada</h1>
+    <h1>Sistema em manutenção .. Tente novamente em instantes!</h1>
 </body>
 
 </html>

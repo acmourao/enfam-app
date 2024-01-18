@@ -9,8 +9,8 @@ use PDOException;
   * Constantes de parâmetros para configuração da conexão  
   */
 
-define('USER', 'root');
-define('PASSWORD', 'root');
+define('USER', 'educaenfam');
+define('PASSWORD', 'educaenfam');
 define('DSN', 'mysql:host=127.0.0.1;dbname=educaenfam;charset=UTF8');
 
 class Conexao extends PDO
@@ -43,7 +43,7 @@ class Conexao extends PDO
                 self::$pdo->setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND, "SET NAMES 'utf8'");
                 //echo "Connected to the database successfully !!<br/><br/>";
             } catch (PDOException $e) {
-                print "Erro Conexão DB:: " . $e->getMessage();
+                print "Erro Conexão DB:: " . $e->getMessage() . " -- " . DSN;
             }
         }
         return self::$pdo;
