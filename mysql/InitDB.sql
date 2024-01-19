@@ -2,7 +2,7 @@ CREATE DATABASE  IF NOT EXISTS `educaenfam` /*!40100 DEFAULT CHARACTER SET utf8m
 USE `educaenfam`;
 -- MySQL dump 10.13  Distrib 8.0.35, for Linux (x86_64)
 --
--- Host: 127.0.0.1    Database: educaenfam
+-- Host: localhost    Database: educaenfam
 -- ------------------------------------------------------
 -- Server version	8.2.0
 
@@ -33,7 +33,8 @@ CREATE TABLE `usuarios` (
   `nascimento` date DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `usuarios_cpf_unique` (`cpf`),
-  UNIQUE KEY `usuarios_email_unique` (`email`)
+  UNIQUE KEY `usuarios_email_unique` (`email`),
+  FULLTEXT KEY `idx_usuarios_nome` (`nome`)
 ) ENGINE=InnoDB AUTO_INCREMENT=143391 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -79,8 +80,8 @@ SET character_set_client = @saved_cs_client;
 DELIMITER ;;
 CREATE DEFINER=`root`@`%` PROCEDURE `buscaUser`(s char(20) )
 begin
-SELECT * FROM educaenfam.vwUsuarios
-where nome SOUNDS LIKE s;
+SELECT * FROM educaenfam.usuarios
+where nome LIKE concat('%',s,'%');
 end ;;
 DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
@@ -115,4 +116,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-01-18 19:56:38
+-- Dump completed on 2024-01-18 22:45:27

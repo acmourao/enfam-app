@@ -1,5 +1,6 @@
+USE `educaenfam`;
 CREATE 
-    ALGORITHM = UNDEFINED 
+     OR REPLACE ALGORITHM = UNDEFINED 
     DEFINER = `root`@`%` 
     SQL SECURITY DEFINER
 VIEW `vwUsuarios` AS
@@ -8,6 +9,7 @@ VIEW `vwUsuarios` AS
         `usuarios`.`nome` AS `nome`,
         `usuarios`.`email` AS `email`,
         `usuarios`.`cpf` AS `cpf`,
-        `usuarios`.`telefone` AS `telefone`
+        `usuarios`.`telefone` AS `telefone`,
+        `usuarios`.`nascimento` AS `nascimento`
     FROM
-        `usuarios`
+        `usuarios`;
