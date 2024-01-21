@@ -4,7 +4,6 @@ namespace DAO;
 
 use DAO\Conexao;
 
-
 class DAO
 {
     private static $conn;
@@ -21,10 +20,33 @@ class DAO
         return $stmt->fetchAll();
     }
 
-    function parametrosQuery($qry, $param)
+    function parametrosQuery($qry, $params)
     {
         $stmt = self::$conn->prepare($qry);
-        $stmt->execute([$param]);
+        $stmt->execute([$params]);
         return $stmt->fetchAll();
+    }
+
+    function UpdatePost($id, $table)
+    {
+        $qry = "UPDATE $table SET ";
+        $params = array();
+        // Iterate $_POST variables
+        foreach ($_POST as $key => $value) {
+            // Append a new SET key/value pair
+            $qry .= "$key = :$key, ";
+            // You're using prepared qrys, right?
+            $params[$key] = $value;
+        }
+        // Cut off last comma and append WHERE clause
+        $qry = substr($qry, 0, -2) . " WHERE id = :id";
+        // Store id for prepared qry
+        $params['id'] = $id;
+        // Prepare the query
+        // $pdo->prepare($qry);
+        $stmt = self::$conn->prepare($qry);
+        // Execute with parameters
+        //$result = $pdo->execute($params);
+        return $stmt->execute([$params]);
     }
 }
