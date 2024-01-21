@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>W3 Bootstrap 3 Example</title>
-    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
-    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
     <header>
         <div class="container p-1 bg-primary text-white text-center">
-            <img class="img-fluid" src="/assets/img/logo.png" height=auto>
+            <img class="img-fluid" src="/img/logo.png" height=auto>
             <h4>Escola Nacional de Formação de Magistrados</h4>
             <div class="row">
                 <div class="col-sm-8">
@@ -33,8 +33,7 @@
                                 <a class="nav-link" href="#">Configurações</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link"
-                                    href="https://www.enfam.jus.br/institucional/sobre-a-escola/">Contato</a>
+                                <a class="nav-link" href="https://www.enfam.jus.br/institucional/sobre-a-escola/">Contato</a>
                             </li>
                         </ul>
                     </div>

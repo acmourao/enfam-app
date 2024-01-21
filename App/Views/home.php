@@ -2,7 +2,7 @@
 
 <main class="container-sm p-3">
 
-    <img src="/assets/img/bg.jpg" class="rounded mx-auto d-block" style="width:100%">
+    <img src="/img/bg.jpg" class="rounded mx-auto d-block" style="width:100%">
 
 </main>
 
