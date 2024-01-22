@@ -6,6 +6,8 @@
 127.0.0.1	d.portal.enfam.jus.br
 127.0.0.1	educaenfam
 127.0.0.1	bootstrap
+127.0.0.1	exemplos
+::1	exemplos
 ::1	d.educa.enfam.jus.br
 ::1	d.portal.enfam.jus.br
 ::1	educaenfam

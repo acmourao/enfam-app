@@ -5,6 +5,7 @@
 !/App
 /App/bootstrap
 !/php
+!/exemplos
 !docker-compose.yml
 !.gitignore
 !composer.json
