@@ -3,7 +3,7 @@
 class Teste
 {
     // Properties
-    public $msg = "olá mundo4!";
+    public $msg = "olá mundo - passo 7!";
 
     public function __construct()
     {

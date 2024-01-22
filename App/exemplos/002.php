@@ -4,7 +4,7 @@ class Exemplo
 {
     public static function exemplo()
     {
-        return "Teste 4!!!";
+        return "Teste 6!!!";
     }
 }
 
