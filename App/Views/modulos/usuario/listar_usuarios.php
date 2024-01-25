@@ -1,9 +1,9 @@
 <?php include PATH_VIEW . 'includes/cabecalho.php' ?>
 
 <main>
-    <section class="py-1 text-center container-fluid">
-        <span class="badge bg-success">
-            <h5><strong>Lista de Usuários</strong></h5>
+    <section class="text-center container-fluid">
+        <span class="badge badge-pill bg-primary">
+            <b5>Lista de Usuários</h5>
         </span>
     </section>
     <div class="navbar shadow-sm">
@@ -23,11 +23,11 @@
                     <?php foreach ($lista as $row) : ?>
                         <tr>
                             <td class="table-active"> <?= $row['id'] ?> </td>
-                            <td class="table-light"> <?= $row['nome'] ?> </td>
+                            <td> <?= $row['nome'] ?> </td>
+                            <td> <?= $row['email'] ?> </td>
                             <td class="table-warning"> <?= $row['cpf'] ?> </td>
-                            <td class="table-info"> <?= $row['email'] ?> </td>
-                            <td class="table-success"> <?= $row['telefone'] ?> </td>
-                            <td class="table-danger"> <?= $row['nascimento'] ?> </td>
+                            <td> <?= $row['telefone'] ?> </td>
+                            <td> <?= $row['nascimento'] ?> </td>
                         </tr>
                     <?php endforeach ?>
                 </tbody>

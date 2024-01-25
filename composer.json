@@ -11,5 +11,7 @@
             "email": "amourao@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "twbs/bootstrap": "5.0.2"
+    }
 }
