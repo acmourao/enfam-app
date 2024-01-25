@@ -9,14 +9,6 @@ services:
       - ./App/:/var/www/html/
       - ./bootstrap:/usr/local/apache2/htdocs
 
-  php:
-    build: ./php/
-    container_name: php
-    expose:
-      - 9000
-    volumes:
-      - ./App/:/var/www/html/
-
   mysql:
     build: ./mysql/
     container_name: mysql
