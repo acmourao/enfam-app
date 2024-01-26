@@ -1,9 +1,10 @@
 # exclude everything except directory foo/bar
 /*
 !/mysql
-!/httpd
+!/apache2
 !/App
 !/php
+!/bootstrap
 !docker-compose.yml
 !.gitignore
 !composer.json

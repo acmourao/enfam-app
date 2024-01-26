@@ -1,8 +1,8 @@
 version: "3.9"
 services:
-  httpd:
-    build: ./httpd/
-    container_name: httpd
+  apache2:
+    build: ./apache2/
+    container_name: apache2
     ports:
       - 80:80
     volumes:
