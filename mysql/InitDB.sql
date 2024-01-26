@@ -2511,7 +2511,7 @@ CREATE TABLE `versoes_anexos_fluxos` (
 -- Temporary view structure for view `vwusuarios`
 --
 
-DROP TABLE IF EXISTS `vwusuarios`;
+DROP TABLE IF EXISTS `vwUsuarios`;
 /*!50001 DROP VIEW IF EXISTS `vwusuarios`*/;
 SET @saved_cs_client     = @@character_set_client;
 /*!50503 SET character_set_client = utf8mb4 */;

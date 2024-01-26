@@ -11,7 +11,7 @@ use PDOException;
 
 define('USER', 'root');
 define('PASSWORD', 'root');
-define('DSN', 'mysql:host=127.0.0.1;dbname=educaenfam;charset=UTF8');
+define('DSN', 'mysql:host=mysql;dbname=educaenfam;charset=UTF8');
 
 class Conexao extends PDO
 {
