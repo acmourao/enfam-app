@@ -6,9 +6,9 @@
             <b5>Lista de Usuários</h5>
         </span>
     </section>
-    <div class="navbar shadow-sm">
+    <div class="navbar">
         <div class="container-fluid">
-            <table class="table table-bordered table-sm">
+            <table class="table table-sm">
                 <thead class="table-dark">
                     <tr>
                         <th scope="col">Id</th>
