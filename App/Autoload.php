@@ -10,9 +10,9 @@ class Autoload
 
         spl_autoload_register(function ($class) {
 
-            $path_to_class = str_replace('\\', '/', $class) . '.php';
+            $path_to_class =  __DIR__ . '/' . str_replace('\\', '/', $class) . '.php';
 
-            var_dump($path_to_class);
+            echo '<br> ' . $path_to_class;
 
             if (file_exists($path_to_class))
                 require $path_to_class;

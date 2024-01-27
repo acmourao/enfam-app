@@ -14,10 +14,12 @@ try {
         case '/usuario':
             UsuarioController::index();
             break;
-
+        case '/':
+            DashboardController::index();
+            break;
             // Tela inicial.
         default:
-            DashboardController::index();
+            include 'error.php';
             break;
     }
 } catch (Exception $e) {
