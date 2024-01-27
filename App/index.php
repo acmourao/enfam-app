@@ -4,8 +4,8 @@ session_start();
 
 $uri_parse = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
-include 'config.php';
+require_once 'config.php';
 
-include 'Autoload.php';
+require_once 'Autoload.php';
 
-include 'rotas.php';
+require_once 'rotas.php';

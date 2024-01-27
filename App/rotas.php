@@ -6,7 +6,7 @@ use Controller\{
 };
 
 //echo $_SESSION['count'] += 1;
-//var_dump($uri_parse);
+var_dump($uri_parse);
 
 try {
     switch ($uri_parse) {
