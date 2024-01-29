@@ -10,7 +10,7 @@ class UsuarioDAO extends DAO
      */
     function getAllRows()
     {
-        return parent::recuperaQuery("SELECT * FROM educaenfam.vwUsuarios limit " . $GLOBALS["MAX_LISTA"]);
+        return parent::recuperaQuery("SELECT * FROM educaenfam.vwusuarios limit " . $GLOBALS["MAX_LISTA"]);
     }
 
     /**
@@ -19,7 +19,7 @@ class UsuarioDAO extends DAO
 
     function getById($id)
     {
-        return parent::parametrosQuery("SELECT * FROM educaenfam.vwUsuarios WHERE id = ?", $id);
+        return parent::parametrosQuery("SELECT * FROM educaenfam.vwusuarios WHERE id = ?", $id);
     }
 
     public function buscaUser($nome)
