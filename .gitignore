@@ -4,6 +4,7 @@
 !/httpd
 !/App
 !/php-fpm
+!/exemplos
 !docker-compose.yml
 !.gitignore
 !.htaccess
