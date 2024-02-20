@@ -25,3 +25,5 @@ class Teste
 $retorno = new Teste();
 
 echo $retorno->get_msg();
+echo '<br><hr>';
+echo '<a href="/">Voltar</a>';
