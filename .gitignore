@@ -1,12 +1,10 @@
-# exclude everything except directory foo/bar
+# exclui tudo menos as pastas da app e arquivos de controle
 /*
 !/mysql
 !/httpd
 !/App
 !/php-fpm
-!/bootstrap
 !docker-compose.yml
 !.gitignore
 !.htaccess
 !composer.json
-# exclui tudo menos as pastas do sistema e arquivo de controle git/compose
