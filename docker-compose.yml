@@ -13,7 +13,6 @@ services:
       - 80:80
     volumes:
       - ./App/:/var/www/html/
-      - ./bootstrap:/usr/local/apache2/htdocs
     depends_on:
       - php-fpm
 
@@ -31,4 +30,4 @@ services:
 volumes:
   mysql-data:
   App:
-  bootstrap:
+  

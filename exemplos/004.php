@@ -28,7 +28,7 @@ if (isset($_POST['enviar-formulario'])) {
         endforeach;
     } else {
         echo 'formulário foi enviado!';
-        header("Location: /exemplos/005.php?nome=$nome&email=$email");
+        header("Location: 005.php?nome=$nome&email=$email");
         die();
     };
 };

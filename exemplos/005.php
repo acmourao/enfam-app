@@ -11,8 +11,7 @@ echo '<br><hr>';
 
 echo $nome . '<br><hr>';
 
-$b = isset($_GET['nome']) && is_string($_GET['nome']) ? $_GET['nome'] : 'vazio';
+$b = strtoupper(isset($_GET['nome']) && is_string($_GET['nome']) ? $_GET['nome'] : 'vazio');
 
 echo $b . '<br><hr>';
-
-echo '<a href="/exemplos">Voltar</a>';
+echo '<a href="/">Voltar</a>';

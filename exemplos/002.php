@@ -9,3 +9,5 @@ class Exemplo
 }
 
 echo Exemplo::exemplo();
+echo '<br><hr>';
+echo '<a href="/">Voltar</a>';

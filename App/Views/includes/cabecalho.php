@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo NOME_APP; ?></title>
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
-    <script src="/assets/js/bootstrap.bundle.min.js"></script>
-    <script src="/assets/js/color-modes.js"></script>
+    <script src="/assets/js/bootstrap.bundle.min.js" defer></script>
+    <script src="/assets/js/angular.min.js" defer></script>
+    <script src="/assets/js/color-modes.js" defer></script>
 </head>
 
 <body>
