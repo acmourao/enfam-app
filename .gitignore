@@ -4,11 +4,7 @@
 !/httpd
 !/App
 !/php-fpm
-<<<<<<< HEAD
-=======
 !/exemplos
->>>>>>> ea1cc52786511d0301dd383a317e362c1b333268
 !docker-compose.yml
 !.gitignore
 !.htaccess
-!composer.json

@@ -10,8 +10,5 @@
             "name": "acmourao",
             "email": "amourao@gmail.com"
         }
-    ],
-    "require": {
-        "twbs/bootstrap": "@5"
-    }
+    ]
 }
