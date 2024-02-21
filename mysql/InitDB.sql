@@ -2511,7 +2511,7 @@ CREATE TABLE `versoes_anexos_fluxos` (
 -- Temporary view structure for view `vwusuarios`
 --
 
-DROP TABLE IF EXISTS `vwUsuarios`;
+DROP TABLE IF EXISTS `vwusuarios`;
 /*!50001 DROP VIEW IF EXISTS `vwusuarios`*/;
 SET @saved_cs_client     = @@character_set_client;
 /*!50503 SET character_set_client = utf8mb4 */;
@@ -2539,7 +2539,7 @@ SET character_set_client = @saved_cs_client;
 DELIMITER ;;
 CREATE DEFINER=`root`@`%` PROCEDURE `buscaUser`(s char(20) )
 begin
-SELECT * FROM educaenfam.vwUsuarios
+SELECT * FROM educaenfam.vwusuarios
 where nome LIKE concat('%',s,'%');
 end ;;
 DELIMITER ;
