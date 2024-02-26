@@ -10,8 +10,13 @@
             "name": "acmourao",
             "email": "amourao@stj.jus.br"
         }
+<<<<<<< HEAD
     ],
     "require": {
         "smalot/pdfparser": "^2.8"
     }
 }
+=======
+    ]
+}
+>>>>>>> fbc31e0a166b662d16789b70275d5736ce31a9e3

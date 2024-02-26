@@ -8,5 +8,8 @@
 !docker-compose.yml
 !.gitignore
 !.htaccess
+<<<<<<< HEAD
 !composer.json
 
+=======
+>>>>>>> fbc31e0a166b662d16789b70275d5736ce31a9e3
