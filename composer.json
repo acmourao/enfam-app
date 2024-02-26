@@ -2,16 +2,16 @@
     "name": "amourao/enfam-app",
     "autoload": {
         "psr-4": {
-            "App\\": "App"
+            "Amourao\\EnfamApp\\": "src/"
         }
     },
     "authors": [
         {
             "name": "acmourao",
-            "email": "amourao@gmail.com"
+            "email": "amourao@stj.jus.br"
         }
     ],
     "require": {
-        "twbs/bootstrap": "@5"
+        "smalot/pdfparser": "^2.8"
     }
 }
