@@ -19,7 +19,8 @@ try {
         $total = 0;
         if ($row[0] == "BPFDEC") {
             //CPF + NOME
-            $CPF = $row[1];
+            //$CPF = $row[1];
+            $CPF = '00061536407';
             $NOME = $row[2];
             var_dump($CPF, $NOME);
             $RTRT = 0;
@@ -27,12 +28,13 @@ try {
             $RTPO = 0;
             $stmt = $conexao->prepare($sql);
             $stmt->execute([$CPF]);
-            if (is_array($stmt->fetchAll())) {
+            $lista = $stmt->fetchAll();
+            if ($lista == NULL) {
                 $sql = "INSERT INTO irpf.2023 (cpf, nome, RTRT, RTIRF, RTPO) VALUES (?, ?, ?, ?, ?)";
             } else {
                 $sql = "UPDATE irpf.2023 SET RTRT = ?, RTIRF = ?, RTPO = ? WHERE cpf = ?";
             }
-            var_dump($sql);
+            var_dump($sql, $lista);
             die();
         } else {
             foreach ($row as $chave => $valor) {
