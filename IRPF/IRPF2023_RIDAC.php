@@ -26,10 +26,7 @@ try {
                     $total += (int) $valor;
                 }
             }
-            //         $result[] = [$CPF, $NOME, number_format($total * .01, 2, ',', '.')];
-            //            $RIDAC = number_format($total * .01, 2, ',', '.');
             $RIDAC = $total * .01;
-            //     $sql = "UPDATE data SET Age='28' WHERE id=201"; 
             $sql = "INSERT INTO irpf.2023 (cpf, nome, RTRT, RTIRF, RIDAC) VALUES (?, ?, 0, 0, ?)";
             $stmt = $conexao->prepare($sql);
             $stmt->execute([$CPF, $NOME, $RIDAC]);

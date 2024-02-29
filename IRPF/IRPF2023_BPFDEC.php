@@ -78,5 +78,3 @@ try {
 
     echo $ex->getMessage();
 }
-
-//            $RIDAC = number_format($total * .01, 2, ',', '.');
