@@ -13,18 +13,25 @@ class DAO
         self::$conn = Conexao::getInstance();
     }
 
-    function recuperaQuery($qry)
+    function QueryAll($qry)
     {
         $stmt = self::$conn->query($qry);
         $stmt->execute();
         return $stmt->fetchAll();
     }
 
-    function parametrosQuery($qry, $params)
+    function QueryMany($qry, $params)
     {
         $stmt = self::$conn->prepare($qry);
         $stmt->execute([$params]);
         return $stmt->fetchAll();
+    }
+
+    function QueryUnique($qry, $params)
+    {
+        $stmt = self::$conn->prepare($qry);
+        $stmt->execute([$params]);
+        return $stmt->fetch();
     }
 
     function UpdatePost($id, $table)

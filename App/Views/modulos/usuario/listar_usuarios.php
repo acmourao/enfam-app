@@ -1,4 +1,6 @@
-<?php include PATH_VIEW . 'includes/cabecalho.php' ?>
+<?php
+include PATH_VIEW . 'includes/cabecalho.php';
+?>
 
 <main>
     <section class="text-center container-fluid">
@@ -14,7 +16,8 @@
                         <th scope="col">Id</th>
                         <th scope="col-lg-6">Nome:</th>
                         <th scope="col">Email:</th>
-                        <th scope="col">CPF:</th>
+                        <th class="align-middle text-center" scope="col">CPF:</th>
+                        <th scope="col">Acts</th>
                         <th scope="col">Telefone:</th>
                         <th scope="col">Nascimento:</th>
                     </tr>
@@ -25,7 +28,8 @@
                             <td class="table-active"> <?= $row['id'] ?> </td>
                             <td> <?= $row['nome'] ?> </td>
                             <td> <?= $row['email'] ?> </td>
-                            <td class="table-warning"> <?= $row['cpf'] ?> </td>
+                            <td class="table-warning align-middle text-center"> <?= FPdfExt::formatcpf($row['cpf']) ?> </td>
+                            <td onclick="location.href = '/irpf?cpf=<?= $row['cpf'] ?>'" class="bi bi-filetype-pdf align-middle text-center" style="font-size: 18px; color: rgb(13, 204, 140);"></td>
                             <td> <?= $row['telefone'] ?> </td>
                             <td> <?= $row['nascimento'] ?> </td>
                         </tr>

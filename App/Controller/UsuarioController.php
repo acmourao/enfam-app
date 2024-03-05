@@ -13,6 +13,7 @@ class UsuarioController extends Controller
         $usr = new UsuarioDAO;
         $lista = $usr->getAllRows();
 
+        include PATH_MODEL . 'FPDFExt.php';
         include PATH_VIEW . 'modulos/usuario/listar_usuarios.php';
     }
 }

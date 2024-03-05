@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo NOME_APP; ?></title>
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/font/bootstrap-icons.min.css" rel="stylesheet">
     <script src="/assets/js/bootstrap.bundle.min.js" defer></script>
-    <script src="/assets/js/angular.min.js" defer></script>
     <script src="/assets/js/color-modes.js" defer></script>
 </head>
 
@@ -44,7 +44,7 @@
                     <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
                         <use href="#sun-fill"></use>
                     </svg>
-                    Light
+                    Claro
                     <svg class="bi ms-auto d-none" width="1em" height="1em">
                         <use href="#check2"></use>
                     </svg>
@@ -55,7 +55,7 @@
                     <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
                         <use href="#moon-stars-fill"></use>
                     </svg>
-                    Dark
+                    Escuro
                     <svg class="bi ms-auto d-none" width="1em" height="1em">
                         <use href="#check2"></use>
                     </svg>

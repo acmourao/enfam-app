@@ -2,6 +2,7 @@
 
 use Controller\{
     DashboardController,
+    IrpfController,
     UsuarioController
 };
 
@@ -13,6 +14,9 @@ try {
             // Rotas para serviços de usuários
         case '/usuario':
             UsuarioController::index();
+            break;
+        case '/irpf':
+            IrpfController::index();
             break;
         case '/':
             DashboardController::index();
