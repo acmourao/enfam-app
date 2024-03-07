@@ -32,7 +32,6 @@ if (isset($_POST['enviar-formulario'])) {
         die();
     };
 };
-
 ?>
 
 <body>

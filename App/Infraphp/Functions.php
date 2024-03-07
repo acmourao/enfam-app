@@ -1,5 +1,5 @@
 <?php
-class FPDFExt
+class Functions
 {
     public static function alinhadir($valor)
     {

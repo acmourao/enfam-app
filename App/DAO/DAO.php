@@ -20,18 +20,11 @@ class DAO
         return $stmt->fetchAll();
     }
 
-    function QueryMany($qry, $params)
+    public static function getStatment($qry, $params)
     {
         $stmt = self::$conn->prepare($qry);
         $stmt->execute([$params]);
-        return $stmt->fetchAll();
-    }
-
-    function QueryUnique($qry, $params)
-    {
-        $stmt = self::$conn->prepare($qry);
-        $stmt->execute([$params]);
-        return $stmt->fetch();
+        return $stmt;
     }
 
     function UpdatePost($id, $table)

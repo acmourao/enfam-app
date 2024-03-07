@@ -75,8 +75,8 @@
         </ul>
     </div>
     <header>
-        <div class="album bg-body-tertiary data-bs-theme=dark">
-            <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="album bg-body-tertiary">
+            <div class="navbar navbar-dark">
                 <div class="container-sm">
                     <a href="/">
                         <img class="img-fluid" src="/assets/img/logo.png" height=auto>

@@ -10,7 +10,7 @@ include PATH_VIEW . 'includes/cabecalho.php';
     </section>
     <div class="navbar">
         <div class="container-fluid">
-            <table class="table table-sm">
+            <table class="table table-sm table-hover table-border">
                 <thead class="table-dark">
                     <tr>
                         <th scope="col">Id</th>
@@ -28,7 +28,7 @@ include PATH_VIEW . 'includes/cabecalho.php';
                             <td class="table-active"> <?= $row['id'] ?> </td>
                             <td> <?= $row['nome'] ?> </td>
                             <td> <?= $row['email'] ?> </td>
-                            <td class="table-warning align-middle text-center"> <?= FPdfExt::formatcpf($row['cpf']) ?> </td>
+                            <td class="table-warning align-middle text-center"> <?= Functions::formatcpf($row['cpf']) ?> </td>
                             <td onclick="location.href = '/irpf?cpf=<?= $row['cpf'] ?>'" class="bi bi-filetype-pdf align-middle text-center" style="font-size: 18px; color: rgb(13, 204, 140);"></td>
                             <td> <?= $row['telefone'] ?> </td>
                             <td> <?= $row['nascimento'] ?> </td>

@@ -13,6 +13,6 @@ class IrpfController extends Controller
         $usr = new IrpfDAO;
         $item = $usr->getByCpf($_GET['cpf']);
         //var_dump($_GET, $item);
-        if ($item != NULL) include PATH_MODEL . 'printpdf.php';
+        if ($item != NULL) include PATH_INFRA . 'printpdf.php';
     }
 }

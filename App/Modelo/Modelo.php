@@ -2,7 +2,7 @@
 
 namespace Modelo;
 
-abstract class Model
+abstract class Modelo
 {
     protected $validaton_erros = array();
 

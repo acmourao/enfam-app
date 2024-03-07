@@ -19,11 +19,11 @@ class UsuarioDAO extends DAO
 
     function getById($id)
     {
-        return parent::QueryUnique("SELECT * FROM educaenfam.vwusuarios WHERE id = ?", $id);
+        return parent::getStatment("SELECT * FROM educaenfam.vwusuarios WHERE id = ?", $id)->fetch();
     }
 
     public function buscaUser($nome)
     {
-        return parent::QueryMany("call buscaUser(?)", $nome);
+        return parent::getStatment("call educaenfam.buscaByNome(?)", $nome)->fetchAll();
     }
 }

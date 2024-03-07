@@ -19,11 +19,11 @@ class IrpfDAO extends DAO
 
     function getByCpf($CPF)
     {
-        return parent::QueryUnique("SELECT * FROM irpf.2023 WHERE cpf = ?", $CPF);
+        return parent::getStatment("call irpf.buscaByCpf(?)", $CPF)->fetch();
     }
 
     public function buscaIRPF($nome)
     {
-        return parent::QueryMany("call buscaIRPF(?)", $nome);
+        return parent::getStatment("call irpf.buscaByNome(?)", $nome)->fetchAll();
     }
 }

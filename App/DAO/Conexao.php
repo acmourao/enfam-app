@@ -41,6 +41,7 @@ class Conexao extends PDO
             try {
                 self::$pdo = new PDO(DSN, USER, PASSWORD, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
                 self::$pdo->setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND, "SET NAMES 'utf8'");
+                //                self::$pdo->setAttribute(PDO::MYSQL_ATTR_USE_BUFFERED_QUERY, false);
                 //echo "Connected to the database successfully !!<br/><br/>";
             } catch (PDOException $e) {
                 print "Erro Conexão DB:: " . $e->getMessage() . " -- " . DSN;
