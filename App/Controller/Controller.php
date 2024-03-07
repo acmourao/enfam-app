@@ -4,9 +4,10 @@ namespace Controller;
 
 abstract class Controller
 {
-    protected static function isProtected()
+    public static function isprotected()
     {
-        // if (!isset($_SESSION["usuario_logado"]))
-        //     header("Location: /error.php");
+        if ($_SESSION["usuario_logado"] == false) {
+            header("Location: /login");
+        }
     }
 }

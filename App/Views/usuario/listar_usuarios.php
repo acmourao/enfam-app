@@ -17,7 +17,7 @@ include PATH_VIEW . 'includes/cabecalho.php';
                         <th scope="col-lg-6">Nome:</th>
                         <th scope="col">Email:</th>
                         <th class="align-middle text-center" scope="col">CPF:</th>
-                        <th scope="col">Acts</th>
+                        <th scope="col">Ações</th>
                         <th scope="col">Telefone:</th>
                         <th scope="col">Nascimento:</th>
                     </tr>
@@ -29,7 +29,11 @@ include PATH_VIEW . 'includes/cabecalho.php';
                             <td> <?= $row['nome'] ?> </td>
                             <td> <?= $row['email'] ?> </td>
                             <td class="table-warning align-middle text-center"> <?= Functions::formatcpf($row['cpf']) ?> </td>
-                            <td onclick="location.href = '/irpf?cpf=<?= $row['cpf'] ?>'" class="bi bi-filetype-pdf align-middle text-center" style="font-size: 18px; color: rgb(13, 204, 140);"></td>
+                            <td>
+                                <i onclick="location.href = '/irpf?cpf=<?= $row['cpf'] ?>'" class="bi bi-filetype-pdf align-middle text-center" style="font-size: 18px; color: rgb(13, 204, 140);"></i>
+                                <i onclick="location.href = '/'" class="bi bi-blockquote-left align-middle text-center" style="font-size: 18px; color: rgb(13, 204, 140);"></i>
+                                <i onclick="location.href = '/usuario.editar?id=<?= $row['id'] ?>'" class="bi bi-box-arrow-in-up-right align-middle text-center" style="font-size: 18px; color: rgb(13, 204, 140);"></i>
+                            </td>
                             <td> <?= $row['telefone'] ?> </td>
                             <td> <?= $row['nascimento'] ?> </td>
                         </tr>
