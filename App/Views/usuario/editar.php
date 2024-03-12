@@ -1,57 +1,54 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário</title>
-</head>
 <?php
 
-if (isset($item)) {
-    //    var_dump($item);
-    $nome = $item['nome'];
-    $email = $item['email'];
-}
+include PATH_VIEW . 'includes/cabecalho.php';
 
-if (isset($_POST['enviar-formulario'])) {
-    $erros = array();
-    $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
-    if (strlen($nome) == 0) {
-        $erros[] = 'Nome não pode ser em branco!';
-    }
+$usuario = $_SESSION['usuario'];
 
-    $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $erros[] = 'Email precisa ser informado!';
-    };
+$nome = $usuario['nome'];
+$email = $usuario['email'];
 
-    if (!empty($erros)) {
-        foreach ($erros as $erro) :
-            echo "<li> $erro </li>";
-        endforeach;
-    } else {
-        header("Location: usuario.gravar?nome=$nome&email=$email");
-    };
-};
-$_SESSION['usuario_logado'] = false;
 ?>
 
-<body>
-    <form action="/usuario.editar" method="post">
-        <div>
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" value="<?php echo $nome ?>" />
+<main>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+        Open modal
+    </button>
+
+    <div class="container mt-3">
+        <!-- The Modal -->
+        <div class="modal" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Editar Usuário</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <form action="/usuario.editar" method="post">
+                            <div>
+                                <label for="nome">Nome:</label>
+                                <input type="text" id="nome" name="nome" value="<?php echo $nome ?>" />
+                            </div>
+                            <div>
+                                <label for="email">E-mail:</label>
+                                <input type="email" id="email" name="email" value="<?php echo $email ?>" />
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-danger" name="enviar-formulario" data-bs-dismiss="modal">Enviar</button>
+                    </div>
+
+                </div>
+            </div>
         </div>
-        <div>
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" value="<?php echo $email ?>" />
-        </div>
+    </div>
+</main>
 
-        <button type="submit" name="enviar-formulario">Enviar</button><br>
-
-    </form>
-
-</body>
-
-</html>
+<?php include PATH_VIEW . 'includes/rodape.php' ?>

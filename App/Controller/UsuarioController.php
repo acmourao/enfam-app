@@ -2,7 +2,8 @@
 
 namespace Controller;
 
-use DAO\UsuarioDAO;
+use DAO\UsuarioDAO,
+    Modelo\UsuarioModelo;
 
 class UsuarioController extends Controller
 {
@@ -22,20 +23,16 @@ class UsuarioController extends Controller
 
         if (isset($_GET['id'])) {
             $usr = new UsuarioDAO;
-            $item = $usr->getById($_GET['id']);
+            $usuario = $usr->getById($_GET['id']);
+            $_SESSION['usuario'] = $usuario;
         }
+
+        //var_dump($_POST);
+
+        if (isset($_POST['enviar-formulario'])) {
+            UsuarioModelo::validar();
+        };
+
         include PATH_VIEW . 'usuario/editar.php';
-    }
-
-    public static function gravar()
-    {
-        //var_dump($_GET);
-
-        $nome = strtoupper($_GET['nome']);
-        $email = $_GET['email'];
-
-        echo "Nome enviado foi $nome e contato $email<br><hr>";
-
-        echo '<a href="/">Voltar</a>';
     }
 }

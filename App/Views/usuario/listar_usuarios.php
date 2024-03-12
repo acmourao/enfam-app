@@ -42,6 +42,7 @@ include PATH_VIEW . 'includes/cabecalho.php';
             </table>
         </div>
     </div>
+
 </main>
 
 <?php include PATH_VIEW . 'includes/rodape.php' ?>

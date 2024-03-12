@@ -6,7 +6,9 @@ abstract class Controller
 {
     public static function isprotected()
     {
-        if ($_SESSION["usuario_logado"] == false) {
+        //var_dump($_SESSION);
+
+        if ($_SESSION['usuario_logado'] == null) {
             header("Location: /login");
         }
     }

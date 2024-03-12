@@ -7,20 +7,16 @@ use Controller\{
     UsuarioController
 };
 
-//echo $_SESSION['count'] += 1;
-var_dump($uri_parse, $_SESSION);
+//var_dump($uri_parse, $_SESSION);
 
 try {
     switch ($uri_parse) {
             // Rotas para serviços de usuários
-        case '/usuario':
+        case '/usuarios':
             UsuarioController::index();
             break;
         case '/usuario.editar':
             UsuarioController::editar();
-            break;
-        case '/usuario.gravar':
-            UsuarioController::gravar();
             break;
         case '/irpf':
             IrpfController::index();
