@@ -19,20 +19,19 @@ class UsuarioController extends Controller
 
     public static function editar()
     {
-        //var_dump($_GET);
+        var_dump($_GET);
 
         if (isset($_GET['id'])) {
             $usr = new UsuarioDAO;
-            $usuario = $usr->getById($_GET['id']);
-            $_SESSION['usuario'] = $usuario;
+            $_SESSION['usuario'] = $usr->getById($_GET['id']);
         }
 
-        //var_dump($_POST);
+        var_dump($_POST);
 
-        if (isset($_POST['enviar-formulario'])) {
+        if (isset($_POST['cod'])) {
             UsuarioModelo::validar();
         };
 
-        include PATH_VIEW . 'usuario/editar.php';
+        include PATH_VIEW . 'usuario/editar_usuario.php';
     }
 }
