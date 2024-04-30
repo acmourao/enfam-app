@@ -44,3 +44,4 @@ update educaenfam.usuarios SET nome = substring(email,1,LOCATE('@',email)-1) whe
 
 SELECT * FROM educaenfam.usuarios where char_length(nome) < 3 order by nome;
 
+update projetos p join (SELECT orientacoes_elaboracao FROM projetos where id = 353) as sub on p.id = 347 set p.orientacoes_elaboracao = sub.orientacoes_elaboracao;
