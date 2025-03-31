@@ -5,6 +5,9 @@ services:
     container_name: nginx
     ports:
       - 80:80
+    depends_on:
+      - php
+      - mysql 
     volumes:
       - ./App/:/var/www/html/
 
@@ -26,6 +29,9 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: educaenfam
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      MYSQL_USER: "enfam"
+      MYSQL_PASSWORD: "@Enfam"
 
 volumes:
   mysql-data:

@@ -1,8 +1,10 @@
 <?php
+
 try {
 
-    $dsn = "mysql:host=127.0.0.1:3306;dbname=educaenfam";
-    $conexao = new PDO($dsn, 'userapp', 'admin123');
+    $dsn = "mysql:host=172.18.0.1:3306;dbname=educaenfam;charset=UTF8";
+    $conexao = new PDO($dsn, 'root', 'root',[PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
+    $conexao->setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND, "SET NAMES 'utf8'");
 
     // $conexao->beginTransaction();
 
@@ -21,7 +23,7 @@ try {
 
     // $conexao->commit();
 
-    echo "Deu certo. ID Inserida = " . $dsn;
+    echo "Deu certo. Conectado! " . $dsn;
 } catch (Exception $ex) {
 
     echo $ex->getMessage();

@@ -114,7 +114,7 @@ DELIMITER ;
 /*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`root`@`%` SQL SECURITY DEFINER */
-/*!50001 VIEW `vwUsuarios` AS select `usuarios`.`id` AS `id`,`usuarios`.`nome` AS `nome`,`usuarios`.`email` AS `email`,`usuarios`.`cpf` AS `cpf`,`usuarios`.`telefone` AS `telefone` from `usuarios` */;
+/*!50001 VIEW `vwUsuarios` AS select `usuarios`.`id` AS `id`,`usuarios`.`nome` AS `nome`,`usuarios`.`email` AS `email`,`usuarios`.`cpf` AS `cpf`,`usuarios`.`telefone` AS `telefone`,`usuarios`.`nascimento` AS `nascimento` from `usuarios` */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
