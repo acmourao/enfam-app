@@ -1,18 +1,8 @@
 <?php
+header('Content-type: application/json');
 
-$nome = strtolower($_GET['nome']);
-$email = $_GET['email'];
+$nome = isset($_GET['nome']) && is_string($_GET['nome']) ? $_GET['nome'] : null;
 
-echo "Nome enviado foi $nome e contato $email<br><hr>";
+$lista_json = array('nome' => $nome, 'email' => $_GET['email']);
 
-var_dump($_GET);
-
-echo '<br><hr>';
-
-echo $nome . '<br><hr>';
-
-$b = isset($_GET['nome']) && is_string($_GET['nome']) ? $_GET['nome'] : 'vazio';
-
-echo $b . '<br><hr>';
-
-echo '<a href="/exemplos">Voltar</a>';
+echo json_encode($lista_json, JSON_PRETTY_PRINT);

@@ -3,7 +3,7 @@
 try {
 
     $dsn = "mysql:host=172.18.0.1:3306;dbname=educaenfam;charset=UTF8";
-    $conexao = new PDO($dsn, 'root', 'root',[PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
+    $conexao = new PDO($dsn, 'root', 'root', [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
     $conexao->setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND, "SET NAMES 'utf8'");
 
     // $conexao->beginTransaction();
@@ -48,3 +48,24 @@ try {
 //     die("ERROR: Could not able to execute .: $sql" . $e->getMessage()); 
 // } 
 // unset($pdo);
+
+// $sql = 'select
+//         product_id,
+//         product_name,
+//         retail_price                                 
+//         from products
+//        ';
+
+// $stmt = $pdo->prepare($sql);
+// $stmt->execute();
+
+// $products = [];
+
+// while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+//     $products[] = $row;
+// }
+
+// $response = [];
+// $response['data'] =  $products;
+
+// echo json_encode($response, JSON_PRETTY_PRINT);
