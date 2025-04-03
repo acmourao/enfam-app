@@ -11,11 +11,20 @@ use Controller\{
 try {
     switch ($uri_parse) {
             // Rotas para serviços de usuários
-        case '/usuario':
+        case '/usuarios':
             UsuarioController::index();
             break;
 
-            // Tela inicial.
+            // login de usuários
+        case '/login':
+            LoginController::login();
+            break;
+
+        case '/logoff':
+            LoginController::logoff();
+            break;
+
+        // Tela inicial.
         default:
             DashboardController::index();
             break;

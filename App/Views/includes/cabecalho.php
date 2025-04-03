@@ -26,7 +26,7 @@
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Usuários</a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="/usuario">Listar</a></li>
+                                    <li><a class="dropdown-item" href="/usuarios">Listar</a></li>
                                     <li><a class="dropdown-item" href="#">Cadastrar</a></li>
                                     <li><a class="dropdown-item" href="#">Autorizar</a></li>
                                 </ul>
@@ -41,7 +41,11 @@
                     </div>
                 </div>
                 <div class="col">
-                    <span class="badge bg-success">Login</span>
+                    <span class="badge bg-success">
+                        <a class="btn btn-danger" href="/logoff">
+                            <span class="badge bg-success">Logoff</span>
+                        </a>
+                    </span>
                 </div>
             </div>
     </header>

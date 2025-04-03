@@ -1,8 +1,8 @@
 CREATE 
     ALGORITHM = UNDEFINED 
-    DEFINER = `root`@`%` 
+    DEFINER = `root`@`localhost` 
     SQL SECURITY DEFINER
-VIEW `vwUsuarios` AS
+VIEW `vwusuarios` AS
     SELECT 
         `usuarios`.`id` AS `id`,
         `usuarios`.`nome` AS `nome`,
