@@ -1,18 +1,18 @@
 <footer>
     <div class="container p-1 my-1 bg-dark text-white">
         <span class="badge">
-            <?php echo date('Y m d H:i:s', $_SESSION['time']); ?></p>
+            2025/04/05
         </span>
         <span class="badge bg-primary">
-            <?php echo NOME_APP; ?>
+            Sistema de Amostra AngularJS
         </span>
         <span class="badge bg-success">
-            <?php echo VER_APP; ?>
+            V1.0.1a
         </span>
     </div>
 </footer>
 
-<?php include PATH_VIEW . 'includes/js_config.php' ?>
+<?php include '/var/www/html/views/includes/js_config.php' ?>
 
 </body>
 

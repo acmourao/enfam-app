@@ -1,9 +1,8 @@
-<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="./node_modules/angular/angular.min.js"></script>
-<script src="./node_modules/angular-route/angular-route.min.js"></script>
-<!-- <script src="js/app.js"></script>
-    <script src="js/services.js"></script>
-    <script src="js/controllers.js"></script>
-    <script src="js/filters.js"></script>
-    <script src="js/directives.js"></script> -->
-<script src="js/common.js"></script>
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/js/angular.min.js"></script>
+<script src="/assets/js/services.js"></script>
+<script src="/assets/js/controllers.js"></script>
+<!-- <script src="assets/js/app.js"></script>
+    <script src="assets/js/filters.js"></script>
+    <script src="assets/js/directives.js"></script> -->
+<script src="/assets/js/common.js"></script>

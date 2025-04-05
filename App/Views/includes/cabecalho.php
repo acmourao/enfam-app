@@ -8,7 +8,7 @@
     <meta name="author" content="Anderson C M">
     <meta name="generator" content="Anderson 0.84.0">
     <title>W3 Bootstrap 3 Example</title>
-    <?php include PATH_VIEW . 'includes/css_config.php' ?>
+    <?php include '/var/www/html/views/includes/css_config.php' ?>
 
 </head>
 
@@ -27,7 +27,9 @@
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Usuários</a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="/usuarios">Listar</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="/views/pages/usuario/listar_usuarios_api.php">Listar</a>
+                                    </li>
                                     <li><a class="dropdown-item" href="#">Cadastrar</a></li>
                                     <li><a class="dropdown-item" href="#">Autorizar</a></li>
                                 </ul>

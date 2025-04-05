@@ -6,16 +6,14 @@ use Controller\{
     UsuarioController
 };
 
-//echo $_SESSION['count'] += 1;
-
 try {
     switch ($uri_parse) {
-            // Rotas para serviços de usuários
+        // Rotas para serviços de usuários
         case '/usuarios':
             UsuarioController::index();
             break;
 
-            // login de usuários
+        // login de usuários
         case '/login':
             LoginController::login();
             break;

@@ -12,6 +12,7 @@ class UsuarioController extends Controller
 
         $usr = new UsuarioDAO;
         $lista = $usr->getAllRows();
+        //$_SESSION["usuarios_lista"] = $lista;
         parent::jsonOutput($lista);
         //include PATH_VIEW . 'modulos/usuario/listar_usuarios.php';
     }

@@ -1,4 +1,4 @@
-<?php include PATH_VIEW . 'includes/cabecalho.php' ?>
+<?php include '/var/www/html/views/includes/cabecalho.php' ?>
 
 <main class="container-sm p-3">
 
@@ -6,4 +6,4 @@
 
 </main>
 
-<?php include PATH_VIEW . 'includes/rodape.php' ?>
+<?php include '/var/www/html/views/includes/rodape.php' ?>
