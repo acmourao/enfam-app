@@ -11,6 +11,9 @@
         </span>
     </div>
 </footer>
+
+<?php include PATH_VIEW . 'includes/js_config.php' ?>
+
 </body>
 
 </html>

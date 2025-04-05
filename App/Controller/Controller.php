@@ -9,4 +9,10 @@ abstract class Controller
         if (!isset($_SESSION["usuario_logado"]))
             header("Location: /error.php");
     }
+
+    protected static function jsonOutput($scope)
+    {
+        header('Content-Type: application/json');
+        echo json_encode($scope, JSON_PRETTY_PRINT);
+    }
 }

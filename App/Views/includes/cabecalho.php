@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" data-bs-theme="dark" ng-app="sampleApp">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aula JS">
+    <meta name="author" content="Anderson C M">
+    <meta name="generator" content="Anderson 0.84.0">
     <title>W3 Bootstrap 3 Example</title>
     <?php include PATH_VIEW . 'includes/css_config.php' ?>
-
-    <?php include PATH_VIEW . 'includes/js_config.php' ?>
 
 </head>
 
@@ -35,7 +36,8 @@
                                 <a class="nav-link" href="#">Configurações</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="https://www.enfam.jus.br/institucional/sobre-a-escola/">Contato</a>
+                                <a class="nav-link"
+                                    href="https://www.enfam.jus.br/institucional/sobre-a-escola/">Contato</a>
                             </li>
                         </ul>
                     </div>

@@ -1,1 +1,9 @@
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./node_modules/angular/angular.min.js"></script>
+<script src="./node_modules/angular-route/angular-route.min.js"></script>
+<!-- <script src="js/app.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/directives.js"></script> -->
+<script src="js/common.js"></script>
