@@ -2,28 +2,28 @@
 
 namespace DAO;
 
-use DAO\Conexao;
+use DAO\DB;
 
 
 class DAO
 {
-    private static $conn;
+    private static $db;
 
     function __construct()
     {
-        self::$conn = Conexao::getInstance();
+        self::$db = DB::getInstance();
     }
 
-    function recuperaQuery($qry)
+    function select($qry)
     {
-        $stmt = self::$conn->query($qry);
+        $stmt = self::$db->query($qry);
         $stmt->execute();
         return $stmt->fetchAll();
     }
 
-    function parametrosQuery($qry, $param)
+    function where($qry, $param)
     {
-        $stmt = self::$conn->prepare($qry);
+        $stmt = self::$db->prepare($qry);
         $stmt->execute([$param]);
         return $stmt->fetchAll();
     }

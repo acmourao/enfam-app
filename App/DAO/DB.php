@@ -11,9 +11,9 @@ use PDOException;
 
 define('USER', 'root');
 define('PASSWORD', 'root');
-define('DSN', 'mysql:host=127.0.0.1;dbname=educaenfam;charset=UTF8');
+define('DSN', 'mysql:host=mysql;dbname=educaenfam;charset=UTF8');
 
-class Conexao extends PDO
+class DB extends PDO
 {
 
     /*  
@@ -27,9 +27,7 @@ class Conexao extends PDO
     /*  
     * Escondendo o construtor da classe  
     */
-    private function __construct()
-    {
-    }
+    private function __construct() {}
 
     /*  
     * Método estático para retornar uma conexão válida  
