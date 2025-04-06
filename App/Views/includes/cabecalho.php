@@ -12,7 +12,7 @@
 
 </head>
 
-<body>
+<body ng-controller="mainController">
     <header>
         <div class="container p-1 bg-primary text-white text-center">
             <img class="img-fluid" src="/assets/img/logo.png" height=auto>

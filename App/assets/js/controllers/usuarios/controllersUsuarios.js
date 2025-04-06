@@ -1,4 +1,4 @@
-app.controller('mainController', ['$scope', 'UserService', function ($scope, userService) {
+app.controller('userController', ['$scope', 'UserService', function ($scope, userService) {
 
     $scope.buscarListaUsuarios = function () {
         $scope.lista_usuarios = userService.getListaUsuarios($scope);

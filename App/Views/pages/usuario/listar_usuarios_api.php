@@ -1,7 +1,7 @@
 <?php include '/var/www/html/views/includes/cabecalho.php' ?>
 
 <main>
-    <div class="container mt-3" ng-controller="mainController">
+    <div class="container mt-3" ng-controller="userController">
         <h4>
             Lista de Usuários
         </h4>
@@ -23,7 +23,7 @@
                     <td class="table-warning"> {{ usuario.cpf }}</td>
                     <td class="table-info"> {{ usuario.email }} </td>
                     <td class="table-success"> {{ usuario.telefone }} </td>
-                    <td class="table-danger"> {{ usuario.nascimento }} </td>
+                    <td class="table-danger"> {{ usuario.nascimento | validate }} </td>
                 </tr>
             </tbody>
         </table>
