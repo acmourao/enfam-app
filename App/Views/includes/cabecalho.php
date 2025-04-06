@@ -12,7 +12,7 @@
 
 </head>
 
-<body ng-controller="mainController">
+<body>
     <header>
         <div class="container p-1 bg-primary text-white text-center">
             <img class="img-fluid" src="/assets/img/logo.png" height=auto>
@@ -28,7 +28,7 @@
                                 <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Usuários</a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item"
-                                            href="/views/pages/usuario/listar_usuarios_api.php">Listar</a>
+                                            href="/views/pages/usuario/listar_usuarios.php">Listar</a>
                                     </li>
                                     <li><a class="dropdown-item" href="#">Cadastrar</a></li>
                                     <li><a class="dropdown-item" href="#">Autorizar</a></li>

@@ -2,7 +2,7 @@
 
 namespace Controller;
 
-class DashboardController extends Controller
+class HomeController extends Controller
 {
 
     public static function index()

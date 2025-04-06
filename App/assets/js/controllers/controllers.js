@@ -1,12 +1,22 @@
-app.controller('mainController', function ($scope, $rootScope, $timeout) {
-    $scope.idUserLogado = null;
-    $scope.AppName = $rootScope.AppName;
-    $scope.versao = $rootScope.versao;
-    $scope.liberacao = $rootScope.liberacao;
+app.controller('mainController', ['$scope', '$rootScope', '$interval', '$timeout', 'AppService',
+    function ($scope, $rootScope, $interval, $timeout, appService) {
 
-    $scope.callAtTimeout = function () {
-        console.log("$scope.callAtTimeoutmeout encerrou a sessão!");
-    }
+        $scope.callAtTimeout = function () {
+            window.location.replace("/logoff");
+            //console.log("$scope.callAtTimeoutmeout encerrou a sessão!");
+        }
 
-    $timeout(function () { $scope.callAtTimeout(); }, 60);
-});
+        $timeout(function () { $scope.callAtTimeout(); }, 60000);
+
+        $scope.init = function () {
+            $scope.ultimoSalvamento = new Date().toLocaleTimeString();
+        }
+
+        $interval(function () {
+            $scope.ultimoSalvamento = new Date().toLocaleTimeString();
+            //console.log($scope.ultimoSalvamento);
+        }, 1000);
+
+        $scope.init();
+
+    }]);

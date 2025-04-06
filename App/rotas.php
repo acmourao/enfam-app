@@ -1,7 +1,7 @@
 <?php
 
 use Controller\{
-    DashboardController,
+    HomeController,
     LoginController,
     UsuarioController
 };
@@ -24,7 +24,7 @@ try {
 
         // Tela inicial.
         default:
-            DashboardController::index();
+            HomeController::index();
             break;
     }
 } catch (Exception $e) {

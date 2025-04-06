@@ -1,11 +1,17 @@
 app.service('AlertService', ['$window', function ($window) {
-    this.doAlert = function (msg) {
+    this.alert = function (msg) {
         $window.alert(msg);
     }
 }]);
 
-app.service('LogService', ['$log', '$rootScope', function ($log, $rootScope) {
-    this.doLog = function (msg) {
-        $log.log($rootScope.AppName + ' <-> ' + msg);
+app.service('LogService', ['$rootScope', function ($rootScope) {
+    this.log = function (msg) {
+        console.log($rootScope.AppName + ' <-> ' + msg);
+    }
+}]);
+
+app.service('AppService', ['$rootScope', function ($rootScope) {
+    this.appInfo = function ($scope) {
+        console.log("AppService running!");
     }
 }]);
