@@ -2,8 +2,8 @@
 
 namespace DAO;
 
+use PDO;
 use DAO\DB;
-
 
 class DAO
 {
@@ -14,17 +14,16 @@ class DAO
         self::$db = DB::getInstance();
     }
 
-    function select($qry)
+    function select($qry, $class)
     {
         $stmt = self::$db->query($qry);
-        $stmt->execute();
-        return $stmt->fetchAll();
+        return $stmt->fetchAll(PDO::FETCH_CLASS, $class);
     }
 
-    function where($qry, $param)
+    function where($qry, $param, $class)
     {
         $stmt = self::$db->prepare($qry);
         $stmt->execute([$param]);
-        return $stmt->fetchAll();
+        return $stmt->fetchAll(PDO::FETCH_CLASS, $class);
     }
 }

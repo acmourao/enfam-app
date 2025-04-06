@@ -18,12 +18,12 @@
             </thead>
             <tbody>
                 <tr ng-repeat="usuario in lista_usuarios track by usuario.id">
-                    <td class="table-active"> @{{ usuario.id }}</td>
-                    <td class="table-light"> @{{ ::usuario.nome }} </td>
-                    <td class="table-warning"> @{{ ::usuario.cpf }}</td>
-                    <td class="table-info"> @{{ ::usuario.email }} </td>
-                    <td class="table-success"> @{{ ::usuario.telefone }} </td>
-                    <td class="table-danger"> @{{ ::usuario.nascimento }} </td>
+                    <td class="table-active"> {{ usuario.id }}</td>
+                    <td class="table-light"> {{ usuario.nome }} </td>
+                    <td class="table-warning"> {{ usuario.cpf }}</td>
+                    <td class="table-info"> {{ usuario.email }} </td>
+                    <td class="table-success"> {{ usuario.telefone }} </td>
+                    <td class="table-danger"> {{ usuario.nascimento }} </td>
                 </tr>
             </tbody>
         </table>

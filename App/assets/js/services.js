@@ -6,34 +6,19 @@ app.run(function ($rootScope) {
     $rootScope.liberacao = "2025.04.05a";
 });
 
-app.service('CtrlService', ['$log', '$http', 'AlertService', '$rootScope', function ($log, $http, alertService, $rootScope) {
+app.service('UserService', ['$log', '$http', 'AlertService', '$rootScope', function ($log, $http, alertService, $rootScope) {
     this.save = function ($scope) {
         $log.log($rootScope + ' <++> ' + $scope);
         alertService.doAlert('Gravação concluída com sucesso!');
     }
 
     this.getListaUsuarios = function ($scope) {
-        $http.get("http://localhost/usuarios")
+        $http.get("/usuarios")
             .then(function (response) {
-                // First function handles success
-                $scope.lista_usuarios = response.data.records;
-                $log.log($scope.lista_usuarios);
-            }, function (response) {
-                // Second function handles error
-                $scope.lista_usuarios = null;
+                $scope.lista_usuarios = response.data;
+                //alertService.doAlert('Lista carregada!');
+                //$log.log($rootScope.AppName + ' <++> carregou ' + $scope.lista_usuarios.length + ' registros');
             });
-    }
-
-    this.getDadosApp = function ($scope) {
-        $scope.AppName = $rootScope.AppName;
-        $scope.versao = $rootScope.versao;
-        $scope.liberacao = $rootScope.liberacao;
-    }
-
-    this.setDadosApp = function ($scope) {
-        $rootScope.AppName = $scope.AppName;
-        $rootScope.versao = $scope.versao;
-        $rootScope.liberacao = $scope.liberacao;
     }
 
 }]);
