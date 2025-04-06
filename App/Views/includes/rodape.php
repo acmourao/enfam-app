@@ -10,7 +10,7 @@
             <span class="badge bg-success">
                 {{ versao }}
             </span>
-            <span class="badge bg-success">
+            <span class="badge bg-danger">
                 {{ ultimoSalvamento }}
             </span>
 

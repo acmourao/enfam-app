@@ -12,7 +12,6 @@ try {
         case '/usuarios':
             UsuarioController::index();
             break;
-
         // login de usuários
         case '/login':
             LoginController::login();
@@ -23,8 +22,18 @@ try {
             break;
 
         // Tela inicial.
-        default:
+        case '/':
+        case '':
             HomeController::index();
+            break;
+        default:
+            if (isset($path[2])) {
+                if ($path[0] == 'usuario') {
+                    if ($path[1] == 'edit') {
+                        UsuarioController::update($path[2]);
+                    }
+                }
+            }
             break;
     }
 } catch (Exception $e) {

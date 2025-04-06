@@ -14,12 +14,12 @@
 
 <body>
     <header>
-        <div class="container p-1 bg-primary text-white text-center">
+        <div class="container p-1 bg-secundary text-white text-center">
             <img class="img-fluid" src="/assets/img/logo.png" height=auto>
             <h4>Escola Nacional de Formação de Magistrados</h4>
             <div class="row">
                 <div class="col-sm-8">
-                    <div class="container text-bg-info">
+                    <div class="container text-bg-dark">
                         <ul class="nav nav-pills">
                             <li class="nav-item">
                                 <a class="nav-link active" href="/">Voltar</a>
@@ -45,11 +45,9 @@
                     </div>
                 </div>
                 <div class="col">
-                    <span class="badge bg-success">
-                        <a class="btn btn-danger" href="/logoff">
-                            <span class="badge bg-success">Logoff</span>
-                        </a>
-                    </span>
+                    <a class="btn btn-dark" href="/logoff">
+                        <span class="badge bg-danger">Logoff</span>
+                    </a>
                 </div>
             </div>
     </header>

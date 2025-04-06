@@ -10,10 +10,14 @@ class UsuarioController extends Controller
     {
         parent::isProtected();
 
-        $usr = new UsuarioDAO;
-        $lista = $usr->getAllRows();
-        //$_SESSION["usuarios_lista"] = $lista;
+        $lista = (new UsuarioDAO)->getAllRows();
         parent::jsonOutput($lista);
-        //include PATH_VIEW . 'pages/usuario/listar_usuarios.php';
+    }
+    public static function update($id)
+    {
+        parent::isProtected();
+
+        $uno = (new UsuarioDAO)->getById($id);
+        parent::jsonOutput($uno);
     }
 }
