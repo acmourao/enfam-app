@@ -29,10 +29,15 @@ try {
         default:
             if (isset($path[2])) {
                 if ($path[0] == 'usuario') {
-                    if ($path[1] == 'edit') {
-                        UsuarioController::update($path[2]);
+                    if ($path[1] == 'get') {
+                        UsuarioController::get($path[2]);
+                    }
+                    if ($path[1] == 'post') {
+                        UsuarioController::post();
                     }
                 }
+            } else {
+                header("Location: /");
             }
             break;
     }

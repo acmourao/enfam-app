@@ -26,4 +26,11 @@ class DAO
         $stmt->execute([$param]);
         return $stmt->fetchAll(PDO::FETCH_CLASS, $class);
     }
+
+    function update($qry, $param)
+    {
+        $stmt = self::$db->prepare($qry);
+        $stmt->execute([$param]);
+        return $stmt->rowCount() . " records UPDATED successfully";
+    }
 }

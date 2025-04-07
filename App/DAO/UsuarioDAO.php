@@ -19,12 +19,17 @@ class UsuarioDAO extends DAO
      * Retorna um registros por Id
      */
 
-    function getById($id)
+    function get($id)
     {
         return parent::where("SELECT * FROM educaenfam.vwUsuarios WHERE id = ?", $id, "Model\UsuarioModel");
     }
 
-    public function buscaUser($nome)
+    function post()
+    {
+        return parent::update("UPDATE educaenfam.usuarios SET remember_token = 'abcdefg' WHERE id = ?", $$_POST['id']);
+    }
+
+    public function filtro($nome)
     {
         return parent::where("call buscaNomeEmailUserLike(?)", $nome, "Model\UsuarioModel");
     }

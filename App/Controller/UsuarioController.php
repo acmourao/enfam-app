@@ -13,11 +13,18 @@ class UsuarioController extends Controller
         $lista = (new UsuarioDAO)->getAllRows();
         parent::jsonOutput($lista);
     }
-    public static function update($id)
+    public static function get($id)
     {
         parent::isProtected();
 
-        $uno = (new UsuarioDAO)->getById($id);
+        $uno = (new UsuarioDAO)->get($id);
+        parent::jsonOutput($uno);
+    }
+    public static function post()
+    {
+        parent::isProtected();
+
+        $uno = (new UsuarioDAO)->post();
         parent::jsonOutput($uno);
     }
 }
