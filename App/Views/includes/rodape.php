@@ -17,7 +17,7 @@
         </div>
 </footer>
 
-<?php include '/var/www/html/views/includes/js_config.php' ?>
+<?php include_once 'js_config.php' ?>
 
 </body>
 

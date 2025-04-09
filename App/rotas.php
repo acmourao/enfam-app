@@ -27,7 +27,10 @@ try {
             HomeController::index();
             break;
         default:
-            if (isset($path[2])) {
+            //die(var_dump($path));
+            //http://localhost/usuario/get/10
+
+            if ((in_array($path[0], $uri)) && (in_array($path[1], $uri)) && (is_numeric($path[2]))) {
                 if ($path[0] == 'usuario') {
                     if ($path[1] == 'get') {
                         UsuarioController::get($path[2]);

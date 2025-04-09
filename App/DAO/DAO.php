@@ -30,7 +30,6 @@ class DAO
     function update($qry, $param)
     {
         $stmt = self::$db->prepare($qry);
-        $stmt->execute([$param]);
-        return $stmt->rowCount() . " records UPDATED successfully";
+        return $stmt->execute([$param]);
     }
 }

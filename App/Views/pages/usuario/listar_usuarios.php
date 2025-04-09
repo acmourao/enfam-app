@@ -1,4 +1,4 @@
-<?php include '/var/www/html/views/includes/cabecalho.php' ?>
+<?php include_once '../../includes/cabecalho.php' ?>
 
 <main>
     <div class="container mt-3" ng-controller="userController">
@@ -30,4 +30,4 @@
     </div>
 </main>
 
-<?php include '/var/www/html/views/includes/rodape.php' ?>
+<?php include_once '../../includes/rodape.php' ?>

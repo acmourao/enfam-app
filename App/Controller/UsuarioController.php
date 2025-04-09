@@ -24,7 +24,6 @@ class UsuarioController extends Controller
     {
         parent::isProtected();
 
-        $uno = (new UsuarioDAO)->post();
-        parent::jsonOutput($uno);
+        parent::jsonOutput((new UsuarioDAO)->post());
     }
 }

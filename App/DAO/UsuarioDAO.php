@@ -26,7 +26,10 @@ class UsuarioDAO extends DAO
 
     function post()
     {
-        return parent::update("UPDATE educaenfam.usuarios SET remember_token = 'abcdefg' WHERE id = ?", $$_POST['id']);
+        return parent::update(
+            "UPDATE educaenfam.usuarios SET remember_token = ? WHERE id = ?",
+            [$$_POST['nome'], $$_POST['id']]
+        );
     }
 
     public function filtro($nome)

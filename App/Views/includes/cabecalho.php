@@ -8,7 +8,7 @@
     <meta name="author" content="Anderson C M">
     <meta name="generator" content="Anderson 0.84.0">
     <title>W3 Bootstrap 3 Example</title>
-    <?php include '/var/www/html/views/includes/css_config.php' ?>
+    <?php include_once 'css_config.php' ?>
 
 </head>
 
