@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "angular": "^1.8.3",
+    "angular-route": "^1.8.3",
+    "bootstrap": "^5.3.3"
+  },
+  "devDependencies": {
+    "@webpack-cli/generators": "^3.0.7",
+    "webpack-cli": "^6.0.1"
+  },
+  "scripts": {
+  "dev": "webpack --config webpack.config.js"
+  }
+}

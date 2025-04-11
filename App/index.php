@@ -10,8 +10,8 @@ $path = explode('/', ltrim($uri_parse, '/'));
 
 $uri = ['get', 'post', 'delete', 'usuario'];
 
-include 'config.php';
+include_once 'config.php';
 
-include 'Autoload.php';
+include_once 'Autoload.php';
 
-include 'rotas.php';
+include_once 'rotas.php';

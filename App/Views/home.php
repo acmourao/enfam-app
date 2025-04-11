@@ -1,4 +1,4 @@
-<?php include 'includes/cabecalho.php' ?>
+<?php include_once 'includes/cabecalho.php' ?>
 
 <main class="container-sm p-3">
 
@@ -6,4 +6,4 @@
 
 </main>
 
-<?php include 'includes/rodape.php' ?>
+<?php include_once 'includes/rodape.php' ?>

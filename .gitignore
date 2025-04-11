@@ -4,7 +4,10 @@
 !/nginx
 !/App
 !/php
+!.env
 !docker-compose.yml
 !.gitignore
 !composer.json
+!package.json
+!webpack.config.js
 # exclui tudo menos as pastas do sistema e arquivo de controle git/compose
