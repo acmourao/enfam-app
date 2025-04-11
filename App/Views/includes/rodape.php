@@ -1,6 +1,7 @@
 <footer>
     <div ng-controller="mainController">
         <div class="container p-1 my-1 bg-dark text-white">
+            <br>
             <span class="badge">
                 {{ liberacao }}
             </span>

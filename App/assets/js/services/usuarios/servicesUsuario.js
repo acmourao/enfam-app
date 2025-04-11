@@ -1,4 +1,4 @@
-app.service('UserService', ['$http', 'AlertService', 'LogService', '$rootScope', function ($http, alertService, logService, $rootScope) {
+app.service('UserService', ['$http', 'AlertService', '$rootScope', function ($http, alertService, $rootScope) {
     this.save = function ($scope) {
         alertService.doAlert('Gravação concluída com sucesso!');
         console.log($rootScope + ' <++> ' + $scope);
@@ -8,8 +8,7 @@ app.service('UserService', ['$http', 'AlertService', 'LogService', '$rootScope',
         $http.get("/usuarios")
             .then(function (response) {
                 $scope.lista_usuarios = response.data;
-                //alertService.doAlert('Lista carregada!');
-                console.log('getListaUsuarios carregou ' + $scope.lista_usuarios.length + ' registros');
+                //console.log('getListaUsuarios carregou ' + $scope.lista_usuarios.length + ' registros');
             });
     }
 
