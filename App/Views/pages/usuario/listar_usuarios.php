@@ -14,6 +14,7 @@
                     <th scope="col">CPF:</th>
                     <th scope="col">Telefone:</th>
                     <th scope="col">Nascimento:</th>
+                    <th scope="col">Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -24,14 +25,13 @@
                     <td class="table-info"> {{ u.email }} </td>
                     <td class="table-success"> {{ u.telefone }} </td>
                     <td class="table-danger"> {{ u.nascimento | validate }} </td>
+                    <td>
+                        <i onclick="location.href = '#'" class="bi bi-blockquote-left align-middle text-center" style="font-size: 18px; color: rgb(13, 204, 140);"></i>
+                        <i onclick="location.href = '#'" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="bi bi-box-arrow-in-up-right align-middle text-center" style="font-size: 18px; color: rgb(13, 204, 140);"></i>
+                    </td>
                 </tr>
             </tbody>
         </table>
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-            Launch static backdrop modal
-        </button>
-
         <!-- Modal -->
         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -42,11 +42,11 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        {{ usuario.id }} {{ usuario.nome }}
+                        {{ usuario.id }} - {{ usuario.cpf }} - {{ usuario.nome }}
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Understood</button>
+                        <button type="button" class="btn btn-primary" onclick="submit()">Understood</button>
                     </div>
                 </div>
             </div>

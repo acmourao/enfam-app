@@ -9,8 +9,8 @@ use PDOException;
   * Constantes de parâmetros para configuração da conexão  
   */
 
-define('USER', 'enfam');
-define('PASSWORD', '@Enfam');
+define('USER', 'root');
+define('PASSWORD', 'root');
 define('DSN', 'mysql:host=mysql;dbname=educaenfam;charset=UTF8');
 
 class DB extends PDO

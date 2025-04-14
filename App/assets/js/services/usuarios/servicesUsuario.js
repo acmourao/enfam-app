@@ -8,7 +8,6 @@ app.service('UserService', ['$http', 'AlertService', '$rootScope', function ($ht
         $http.get("/usuarios")
             .then(function (response) {
                 $scope.lista_usuarios = response.data;
-                //console.log('getListaUsuarios carregou ' + $scope.lista_usuarios.length + ' registros');
             });
     }
 
