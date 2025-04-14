@@ -11,4 +11,11 @@ app.service('UserService', ['$http', 'AlertService', '$rootScope', function ($ht
             });
     }
 
+    this.getUsuarioById = function ($scope) {
+        $http.get("/usuario/get/" + $scope.id)
+            .then(function (response) {
+                $scope.usuario = response.data[0];
+            });
+    }
+
 }]);

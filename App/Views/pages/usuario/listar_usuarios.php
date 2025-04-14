@@ -27,7 +27,7 @@
                     <td class="table-danger"> {{ u.nascimento | validate }} </td>
                     <td>
                         <i onclick="location.href = '#'" class="bi bi-blockquote-left align-middle text-center" style="font-size: 18px; color: rgb(13, 204, 140);"></i>
-                        <i onclick="location.href = '#'" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="bi bi-box-arrow-in-up-right align-middle text-center" style="font-size: 18px; color: rgb(13, 204, 140);"></i>
+                        <i ng-click="buscarById(u.id)" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="bi bi-box-arrow-in-up-right align-middle text-center" style="font-size: 18px; color: rgb(13, 204, 140);"></i>
                     </td>
                 </tr>
             </tbody>
