@@ -20,24 +20,21 @@ try {
         case '/logoff':
             LoginController::logoff();
             break;
-
         // Tela inicial.
         case '/':
         case '':
             HomeController::index();
             break;
         default:
-            //die(var_dump($path));
-            //http://localhost/usuario/get/10
 
-            if ((in_array($path[0], $uri)) && (in_array($path[1], $uri)) && (is_numeric($path[2]))) {
-                if ($path[0] == 'usuario') {
-                    if ($path[1] == 'get') {
+            if ($path[0] == 'usuario') {
+                if ($path[1] == 'get') {
+                    if (is_numeric($path[2])) {
                         UsuarioController::get($path[2]);
                     }
-                    if ($path[1] == 'post') {
-                        UsuarioController::post();
-                    }
+                }
+                if (($path[1] == 'post')) {
+                    UsuarioController::post();
                 }
             } else {
                 header("Location: /");

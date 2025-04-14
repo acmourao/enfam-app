@@ -9,6 +9,10 @@ app.controller('userController', ['$scope', 'UserService', function ($scope, use
         userService.getUsuarioById($scope);
     }
 
+    $scope.save = function () {
+        userService.save($scope);
+    }
+
     $scope.init();
 
 }]);

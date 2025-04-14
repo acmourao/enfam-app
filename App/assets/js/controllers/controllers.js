@@ -6,7 +6,7 @@ app.controller('mainController', ['$scope', '$rootScope', '$interval', '$timeout
             //console.log("$scope.callAtTimeoutmeout encerrou a sessão!");
         }
 
-        $timeout(function () { $scope.callAtTimeout(); }, 60000);
+        $timeout(function () { $scope.callAtTimeout(); }, 600000);
 
         $scope.init = function () {
             $scope.ultimoSalvamento = new Date().toLocaleTimeString();
@@ -15,7 +15,7 @@ app.controller('mainController', ['$scope', '$rootScope', '$interval', '$timeout
         $interval(function () {
             $scope.ultimoSalvamento = new Date().toLocaleTimeString();
             //console.log($scope.ultimoSalvamento);
-        }, 1000);
+        }, 300000);
 
         $scope.init();
 

@@ -7,7 +7,7 @@
     <meta name="description" content="Aula JS">
     <meta name="author" content="Anderson C M">
     <meta name="generator" content="Anderson 0.84.0">
-    <title>W3 Bootstrap 3 Example</title>
+    <title>Sample App AngularJS 1.8</title>
     <?php include_once 'css_config.php' ?>
 </head>
 

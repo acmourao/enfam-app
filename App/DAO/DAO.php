@@ -30,6 +30,6 @@ class DAO
     function update($qry, $param)
     {
         $stmt = self::$db->prepare($qry);
-        return $stmt->execute([$param]);
+        return $stmt->execute($param);
     }
 }

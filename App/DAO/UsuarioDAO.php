@@ -24,12 +24,9 @@ class UsuarioDAO extends DAO
         return parent::where("SELECT * FROM educaenfam.vwUsuarios WHERE id = ?", $id, "Model\UsuarioModel");
     }
 
-    function post()
+    function post($request)
     {
-        return parent::update(
-            "UPDATE educaenfam.usuarios SET remember_token = ? WHERE id = ?",
-            [$$_POST['nome'], $$_POST['id']]
-        );
+        return parent::update("UPDATE educaenfam.usuarios SET remember_token = ? WHERE id = ?", [$request->nome, $request->id]);
     }
 
     public function filtro($nome)

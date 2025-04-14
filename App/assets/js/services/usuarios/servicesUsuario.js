@@ -1,7 +1,11 @@
-app.service('UserService', ['$http', 'AlertService', '$rootScope', function ($http, alertService, $rootScope) {
+app.service('UserService', ['$http', function ($http) {
+
     this.save = function ($scope) {
-        alertService.doAlert('Gravação concluída com sucesso!');
-        console.log($rootScope + ' <++> ' + $scope);
+        $http.post('/usuario/post', $scope.usuario).success(function (response) {
+            console.log(response);
+        }).error(function (error) {
+            console.log(error);
+        })
     }
 
     this.getListaUsuarios = function ($scope) {
