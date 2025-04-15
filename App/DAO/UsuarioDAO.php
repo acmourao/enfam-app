@@ -10,7 +10,7 @@ class UsuarioDAO extends DAO
     /**
      * Retorna todos os registros da tabela 
      */
-    function getAllRows()
+    function getAll()
     {
         return parent::select("SELECT * FROM educaenfam.vwUsuarios limit " . $GLOBALS["MAX_LISTA"], "Model\UsuarioModel");
     }

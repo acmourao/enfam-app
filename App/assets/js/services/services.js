@@ -4,14 +4,29 @@ app.service('AlertService', ['$window', function ($window) {
     }
 }]);
 
-app.service('LogService', ['$rootScope', function ($rootScope) {
-    this.log = function (msg) {
-        console.log($rootScope.AppName + ' <-> ' + msg);
-    }
-}]);
+app.service('HttpService', ['$rootScope', '$http', function ($rootScope, $http) {
 
-app.service('AppService', ['$rootScope', function ($rootScope) {
-    this.appInfo = function ($scope) {
-        console.log("AppService running!");
+    this.post = function ($url) {
+        $http.post($url, $rootScope.item).then(function (response) {
+            return response.data;
+        }), function (error) {
+            return error.data;
+        }
+    }
+
+    this.get = function ($url) {
+        $http.get($url)
+            .then(function (response) {
+                $rootScope.lista = response.data;
+                return $rootScope.lista;
+            });
+    }
+
+    this.getById = function ($url) {
+        $http.get($url)
+            .then(function (response) {
+                $rootScope.item = response.data[0];
+                return $rootScope.item;
+            });
     }
 }]);

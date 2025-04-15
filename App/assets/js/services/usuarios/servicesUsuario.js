@@ -1,25 +1,15 @@
-app.service('UserService', ['$http', function ($http) {
+app.service('UserService', ['HttpService', '$rootScope', function ($httpService) {
 
-    this.save = function ($scope) {
-        $http.post('/usuario/post', $scope.usuario).then(function (response) {
-            console.log(response.data);
-        }), function (error) {
-            console.log(error.data);
-        }
+    this.save = function ($url) {
+        return $httpService.post($url);
     }
 
-    this.getListaUsuarios = function ($scope) {
-        $http.get("/usuarios")
-            .then(function (response) {
-                $scope.lista_usuarios = response.data;
-            });
+    this.getListaUsuarios = function ($url) {
+        return $httpService.get($url);
     }
 
-    this.getUsuarioById = function ($scope) {
-        $http.get("/usuario/get/" + $scope.id)
-            .then(function (response) {
-                $scope.usuario = response.data[0];
-            });
+    this.getUsuarioById = function ($url) {
+        return $httpService.getById($url);
     }
 
 }]);

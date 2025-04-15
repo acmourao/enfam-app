@@ -1,22 +1,20 @@
-app.controller('mainController', ['$scope', '$rootScope', '$interval', '$timeout', 'AppService',
-    function ($scope, $rootScope, $interval, $timeout, appService) {
+app.controller('mainController', ['$scope', '$rootScope', '$interval', '$timeout',
+    function ($scope, $rootScope, $interval, $timeout) {
 
-        $scope.callAtTimeout = function () {
+        this.callAtTimeout = function () {
             window.location.replace("/logoff");
-            //console.log("$scope.callAtTimeoutmeout encerrou a sessão!");
         }
 
-        $timeout(function () { $scope.callAtTimeout(); }, 600000);
+        $timeout(function () { this.callAtTimeout(); }, 600000);
 
-        $scope.init = function () {
+        this.init = function () {
             $scope.ultimoSalvamento = new Date().toLocaleTimeString();
         }
 
         $interval(function () {
             $scope.ultimoSalvamento = new Date().toLocaleTimeString();
-            //console.log($scope.ultimoSalvamento);
-        }, 300000);
+        }, 1000);
 
-        $scope.init();
+        this.init();
 
     }]);

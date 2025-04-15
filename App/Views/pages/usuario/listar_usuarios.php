@@ -18,7 +18,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="u in lista_usuarios track by u.id">
+                <tr ng-repeat="u in lista track by u.id">
                     <td class="table-active"> {{ u.id }}</td>
                     <td class="table-light"> {{ u.nome }} </td>
                     <td class="table-warning"> {{ u.cpf }}</td>
@@ -42,7 +42,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        {{ usuario.id }} - {{ usuario.nome }}
+                        {{ item.id }} - {{ item.nome }}
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

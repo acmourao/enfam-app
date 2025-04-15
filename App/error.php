@@ -7,26 +7,31 @@
     <meta name="description" content="Aula JS">
     <meta name="author" content="Anderson C M">
     <meta name="generator" content="Anderson 0.84.0">
-    <title>Página de Erro</title>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Sample App AngularJS 1.8</title>
+    <?php include_once 'views/includes/css_config.php' ?>
 </head>
 
-<body>
-    <div class="container-fluid">
-        <div class="row">
-            <div
-                class="col-sm-12 col-md-12 col-lg-12 col-xl-12 schools-text d-flex flex-column justify-content-center align-items-center">
+<main class="container-sm p-3">
 
-                <h1>Página não encontrada</h1>
-                <p>
-                    <a class="btn btn-danger" href="/login">
-                        Login
-                    </a>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div
+                    class="col-sm-12 col-md-12 col-lg-12 col-xl-12 schools-text d-flex flex-column justify-content-center align-items-center">
 
+                    <h1>Página não encontrada</h1>
+                    <p>
+                        <a class="btn btn-danger" href="/login">
+                            Login
+                        </a>
+
+                </div>
             </div>
         </div>
-    </div>
-</body>
+    </body>
+
+</main>
+
+<?php include_once 'views/includes/rodape.php' ?>
 
 </html>

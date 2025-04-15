@@ -10,7 +10,7 @@ class UsuarioController extends Controller
     {
         parent::isProtected();
 
-        $lista = (new UsuarioDAO)->getAllRows();
+        $lista = (new UsuarioDAO)->getAll();
         parent::jsonOutput($lista);
     }
     public static function get($id)
