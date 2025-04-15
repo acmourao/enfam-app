@@ -1,11 +1,11 @@
 app.service('UserService', ['$http', function ($http) {
 
     this.save = function ($scope) {
-        $http.post('/usuario/post', $scope.usuario).success(function (response) {
-            console.log(response);
-        }).error(function (error) {
-            console.log(error);
-        })
+        $http.post('/usuario/post', $scope.usuario).then(function (response) {
+            console.log(response.data);
+        }), function (error) {
+            console.log(error.data);
+        }
     }
 
     this.getListaUsuarios = function ($scope) {

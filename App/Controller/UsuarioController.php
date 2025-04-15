@@ -17,13 +17,12 @@ class UsuarioController extends Controller
     {
         parent::isProtected();
 
-        $uno = (new UsuarioDAO)->get($id);
-        parent::jsonOutput($uno);
+        parent::jsonOutput((new UsuarioDAO)->get($id));
     }
     public static function post()
     {
         parent::isProtected();
 
-        parent::jsonOutput((new UsuarioDAO)->post(parent::request()));
+        return parent::jsonOutput((new UsuarioDAO)->post(parent::request()));
     }
 }

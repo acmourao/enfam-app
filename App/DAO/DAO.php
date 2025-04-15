@@ -23,7 +23,7 @@ class DAO
     function where($qry, $param, $class)
     {
         $stmt = self::$db->prepare($qry);
-        $stmt->execute([$param]);
+        $stmt->execute($param);
         return $stmt->fetchAll(PDO::FETCH_CLASS, $class);
     }
 

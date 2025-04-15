@@ -42,5 +42,5 @@ try {
             break;
     }
 } catch (Exception $e) {
-    echo "Erro do Sistema ::: " . $e->getMessage() . "<br><hr>" . $uri_parse;
+    echo $e->getMessage() . " " . $uri_parse;
 }

@@ -21,7 +21,7 @@ class UsuarioDAO extends DAO
 
     function get($id)
     {
-        return parent::where("SELECT * FROM educaenfam.vwUsuarios WHERE id = ?", $id, "Model\UsuarioModel");
+        return parent::where("SELECT * FROM educaenfam.vwUsuarios WHERE id = ?", [$id], "Model\UsuarioModel");
     }
 
     function post($request)
