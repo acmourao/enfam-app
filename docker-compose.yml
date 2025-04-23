@@ -1,4 +1,3 @@
-version: "3.9"
 services:
   nginx:
     build: ./nginx/
@@ -25,13 +24,12 @@ services:
     ports:
       - 3306:3306
     volumes:
-      - ./mysql-data/:/var/lib/mysql
+      - mysql-data:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: educaenfam
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
-      MYSQL_USER: "enfam"
-      MYSQL_PASSWORD: "@Enfam"
+      host_cache_size: 0
 
 volumes:
   mysql-data:
