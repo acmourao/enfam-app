@@ -13,7 +13,7 @@ abstract class Controller
     protected static function jsonOutput($scope)
     {
         header('Content-Type: application/json');
-        echo json_encode($scope, JSON_PRETTY_PRINT);
+        echo json_encode($scope, JSON_UNESCAPED_LINE_TERMINATORS );
     }
 
     protected static function request()

@@ -1,9 +1,3 @@
-app.service('AlertService', ['$window', function ($window) {
-    this.alert = function (msg) {
-        $window.alert(msg);
-    }
-}]);
-
 app.service('HttpService', ['$rootScope', '$http', function ($rootScope, $http) {
 
     this.post = function ($url) {

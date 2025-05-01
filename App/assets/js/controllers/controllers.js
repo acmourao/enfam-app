@@ -1,20 +1,18 @@
 app.controller('mainController', ['$scope', '$rootScope', '$interval', '$timeout',
     function ($scope, $rootScope, $interval, $timeout) {
 
-        this.callAtTimeout = function () {
+        (this.init = function () {
+            $scope.ultimoSalvamento = new Date().toLocaleTimeString();
+        })();
+
+        function callAtTimeout() {
             window.location.replace("/logoff");
         }
 
-        $timeout(function () { this.callAtTimeout(); }, 600000);
-
-        this.init = function () {
-            $scope.ultimoSalvamento = new Date().toLocaleTimeString();
-        }
+        $timeout(function () { callAtTimeout() }, 6e4);
 
         $interval(function () {
             $scope.ultimoSalvamento = new Date().toLocaleTimeString();
-        }, 1000);
-
-        this.init();
+        }, 1e3);
 
     }]);

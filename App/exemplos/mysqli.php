@@ -1,5 +1,6 @@
 <?php
-$host = '172.18.0.1';
+//$host = '172.18.0.1'; //bridge do docker
+$host = 'mysql'; //container name
 $user = 'root';
 $pass = 'root';
 $db = 'educaenfam';

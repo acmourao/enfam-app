@@ -2,7 +2,8 @@
 
 try {
 
-    $dsn = "mysql:host=172.18.0.1:3306;dbname=educaenfam;charset=UTF8";
+    //$dsn = "mysql:host=172.18.0.1:3306;dbname=educaenfam;charset=UTF8";
+    $dsn = "mysql:host=mysql:3306;dbname=educaenfam;charset=UTF8";
     $conexao = new PDO($dsn, 'root', 'root', [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
     $conexao->setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND, "SET NAMES 'utf8'");
 
