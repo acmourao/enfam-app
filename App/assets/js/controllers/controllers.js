@@ -9,7 +9,7 @@ app.controller('mainController', ['$scope', '$rootScope', '$interval', '$timeout
             window.location.replace("/logoff");
         }
 
-        $timeout(function () { callAtTimeout() }, 6e4);
+        $timeout(function () { callAtTimeout() }, 18e4);
 
         $interval(function () {
             $scope.ultimoSalvamento = new Date().toLocaleTimeString();

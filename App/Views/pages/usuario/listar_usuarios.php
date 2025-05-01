@@ -18,7 +18,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="u in lista track by u.id">
+                <tr ng-repeat="u in usuarios track by u.id">
                     <td class="table-active"> {{ u.id }}</td>
                     <td class="table-light"> {{ u.nome }} </td>
                     <td class="table-warning"> {{ u.cpf }}</td>
@@ -26,7 +26,7 @@
                     <td class="table-success"> {{ u.telefone }} </td>
                     <td class="table-danger"> {{ u.nascimento | validate }} </td>
                     <td>
-                        <i onclick="location.href = '#'" class="bi bi-blockquote-left align-middle text-center" style="font-size: 18px; color: rgb(13, 204, 140);"></i>
+                        <i onclick="location.href = 'form_edit_usuario.php'" class="bi bi-blockquote-left align-middle text-center" style="font-size: 18px; color: rgb(13, 204, 140);"></i>
                         <i ng-click="buscarById(u.id)" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="bi bi-box-arrow-in-up-right align-middle text-center" style="font-size: 18px; color: rgb(13, 204, 140);"></i>
                     </td>
                 </tr>
@@ -38,11 +38,11 @@
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Avançar Etapa - Usuários</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        {{ item.id }} - {{ item.nome }}
+                        {{ usuario.id }} - {{ usuario.nome }}
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

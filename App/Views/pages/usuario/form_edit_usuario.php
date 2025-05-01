@@ -3,7 +3,7 @@
 <main>
     <div class="container-xxl bd-gutter mt-3 bd-layout" ng-controller="userController">
         <h4>
-            Lista de Usuários
+            Cadastro do Usuário
         </h4>
 
         <form class="row g-3 needs-validation" novalidate>
@@ -74,7 +74,7 @@
                 </div>
             </div>
             <div class="col-12">
-                <button class="btn btn-primary" type="submit">Submit form</button>
+                <button class="btn btn-primary" type="submit">Salvar</button>
             </div>
         </form>
 </main>
