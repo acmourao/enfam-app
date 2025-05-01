@@ -9,16 +9,23 @@ app.service('HttpService', ['$rootScope', '$http', function ($rootScope, $http) 
     };
 
     this.get = function ($url) {
-        return $http.get($url)
+        var arr = [];
+        $http.get($url)
             .then(function (response) {
                 //$rootScope.lista = response.data;
-                //console.log(response.data);
-                if (response.data.lenght == 1) {
-                    return response.data[0]
-                } else {
-                    return response.data
-                }
+                response.data.forEach((element) => arr.push(element));
             });
+        return arr;
+    };
+
+    this.getOne = function ($url) {
+        var one = new Object();
+        $http.get($url)
+            .then(function (response) {
+                //$rootScope.item = response.data[0];
+                one = Object.assign(one, response.data[0]);
+            });
+        return one;
     };
 
 }]);

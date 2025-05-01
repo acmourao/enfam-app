@@ -1,13 +1,12 @@
 app.controller('userController', ['$scope', '$rootScope', 'UserService', function ($scope, $rootScope, userService) {
 
     (this.init = function () {
-        $scope.usuarios = userService.getListaUsuarios("/usuarios");
-        console.log($scope);
+        $scope.usuarios = userService.get("/usuarios");
     })();
 
     $scope.buscarById = function ($id) {
-        $scope.usuario = userService.getUsuarioById('/usuario/get/' + $id);
-        //console.log($scope);
+        $scope.usuario = userService.getOne('/usuario/get/' + $id);
+        //console.log($scope.usuario);
     }
 
     $scope.save = function () {
