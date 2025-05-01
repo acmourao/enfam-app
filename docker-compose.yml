@@ -8,7 +8,7 @@ services:
       - php
       - mysql 
     volumes:
-      - ./App/:/var/www/html/
+      - ./App:/var/www/html/
 
   php:
     build: ./php/
@@ -16,7 +16,7 @@ services:
     expose:
       - 9000
     volumes:
-      - ./App/:/var/www/html/
+      - ./App:/var/www/html/
 
   mysql:
     build: ./mysql/
@@ -24,7 +24,7 @@ services:
     ports:
       - 3306:3306
     volumes:
-      - mysql-data:/var/lib/mysql
+      - ./mysql-data:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: educaenfam
