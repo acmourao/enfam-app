@@ -1,65 +1,70 @@
 <?php include_once '../../includes/cabecalho.php' ?>
 
 <main>
-    <div class="container-xxl bd-gutter mt-3 bd-layout" ng-controller="userController">
+    <div class="container-xxl bd-gutter mt-3 bd-layout" ng-controller="userController"
+        ng-init="buscarById(<?php echo $_GET['id']; ?>)">
         <h4>
-            Cadastro do Usuário
+            Cadastro do Usuário - {{usuario.id}} - {{usuario.nome}}
         </h4>
 
         <form class="row g-3 needs-validation" novalidate>
             <div class="col-md-4">
-                <label for="validationCustom01" class="form-label">First name</label>
-                <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+                <label for="validationCustom01" class="form-label">CPF</label>
+                <input type="text" class="form-control" id="validationCustom01" ng-model="usuario.cpf" required>
                 <div class="valid-feedback">
                     Looks good!
                 </div>
                 <div class="invalid-feedback">
-                    Please provide a valid name max 120 letters.
+                    Please provide a valid cpf max 11 letters.
                 </div>
             </div>
             <div class="col-md-4">
-                <label for="validationCustom02" class="form-label">Last name</label>
-                <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+                <label for="validationCustom02" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="validationCustom02" ng-model="usuario.nome" required>
                 <div class="valid-feedback">
                     Looks good!
                 </div>
                 <div class="invalid-feedback">
-                    Please provide a valid surname max 120 letters.
+                    Please provide a valid nome max 120 letters.
                 </div>
             </div>
             <div class="col-md-4">
-                <label for="validationCustomUsername" class="form-label">Username</label>
+                <label for="validationCustomUsername" class="form-label">eMail</label>
                 <div class="input-group has-validation">
                     <span class="input-group-text" id="inputGroupPrepend">@</span>
                     <input type="text" class="form-control" id="validationCustomUsername"
-                        aria-describedby="inputGroupPrepend" required>
+                        aria-describedby="inputGroupPrepend" ng-model="usuario.email" required>
                     <div class="invalid-feedback">
-                        Please choose a username.
+                        Please choose a email.
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
-                <label for="validationCustom03" class="form-label">City</label>
-                <input type="text" class="form-control" id="validationCustom03" required>
+                <label for="validationCustom03" class="form-label">Telefone</label>
+                <input type="text" class="form-control" id="validationCustom03" ng-model="usuario.telefone" required>
                 <div class="invalid-feedback">
-                    Please provide a valid city.
+                    Please provide a valid telefone.
                 </div>
             </div>
             <div class="col-md-3">
-                <label for="validationCustom04" class="form-label">State</label>
+                <label for="validationCustom04" class="form-label">Naturalidade</label>
                 <select class="form-select" id="validationCustom04" required>
-                    <option selected disabled value="">Choose...</option>
-                    <option>...</option>
+                    <option selected disabled value="">:. Selecione .:</option>
+                    <option>Acre</option>
+                    <option>Bahia</option>
+                    <option>Aracajú</option>
+                    <option>DF</option>
+                    <option>Pará</option>
                 </select>
                 <div class="invalid-feedback">
-                    Please select a valid state.
+                    Please select a Estado.
                 </div>
             </div>
             <div class="col-md-3">
-                <label for="validationCustom05" class="form-label">Zip</label>
-                <input type="text" class="form-control" id="validationCustom05" required>
+                <label for="validationCustom05" class="form-label">Nascimento</label>
+                <input type="text" class="form-control" id="validationCustom05" ng-model="usuario.nascimento" required>
                 <div class="invalid-feedback">
-                    Please provide a valid zip.
+                    Please provide a valid data de nascimento.
                 </div>
             </div>
             <div class="col-12">

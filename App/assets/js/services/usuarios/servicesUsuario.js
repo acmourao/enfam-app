@@ -1,15 +1,14 @@
-app.service('UserService', ['HttpService', '$rootScope', function ($httpService) {
+app.service('UserService', ['HttpService', '$rootScope', function ($httpService, $rootScope) {
 
     this.get = function ($url) {
-        return $httpService.get($url);
-    };
+        return $httpService.get($url)
+    }
 
-    this.getOne = function ($url) {
-        return $httpService.getOne($url);
-    };
+    this.getUnique = function ($url) {
+        return $httpService.getUnique($url)
+    }
 
     this.save = function ($url, $req) {
-        return $httpService.post($url, $req);
-    };
-
+        return $httpService.post($url, $req)
+    }
 }]);
