@@ -14,6 +14,8 @@ app.controller('userController', ['$scope', '$rootScope', 'UserService', functio
 
     $scope.save = function () {
         $scope.msg = (userService.save('/usuario/post', $scope.usuario));
+        appInfo('registro salvo com sucesso!');
+        document.getElementById("closeModalButton").click();
     }
 
 }]);

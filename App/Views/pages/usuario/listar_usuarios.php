@@ -42,10 +42,10 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        {{ usuario.cpf }} - {{ usuario.nome }}
+                        {{ usuario.cpf }} - {{ usuario.nome }} - {{ usuario.email }}
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" id='closeModalButton' class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-primary" ng-click="save()">Gravar</button>
                     </div>
                     <div>{{ msg.$$state.value }}</div>

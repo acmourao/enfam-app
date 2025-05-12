@@ -3,12 +3,13 @@ module.exports = {
     name: 'sampleApp',
     mode: 'production',
     entry: {
-        app: ['./assets/js/services/services.js',
+        app: [
+            './assets/js/services/services.js',
             './assets/js/services/usuarios/servicesUsuario.js',
             './assets/js/controllers/controllers.js',
             './assets/js/controllers/usuarios/controllersUsuarios.js',
-            './assets/js/filters/filters.js',
-            './assets/js/app/common.js']
+            './assets/js/filters/filters.js'
+        ]
     },
     output: {
         path: __dirname + '/App/assets/js/vendor',

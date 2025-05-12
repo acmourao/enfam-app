@@ -12,20 +12,20 @@
                 <label for="validationCustom01" class="form-label">CPF</label>
                 <input type="text" class="form-control" id="validationCustom01" ng-model="usuario.cpf" required>
                 <div class="valid-feedback">
-                    Looks good!
+                    Tudo ok!
                 </div>
                 <div class="invalid-feedback">
-                    Please provide a valid cpf max 11 letters.
+                    forneça um válido cpf com no max 11 caracteres.
                 </div>
             </div>
             <div class="col-md-4">
                 <label for="validationCustom02" class="form-label">Nome</label>
                 <input type="text" class="form-control" id="validationCustom02" ng-model="usuario.nome" required>
                 <div class="valid-feedback">
-                    Looks good!
+                    Tudo ok!
                 </div>
                 <div class="invalid-feedback">
-                    Please provide a valid nome max 120 letters.
+                    Nomes devem conter no máximo 120 caracteres.
                 </div>
             </div>
             <div class="col-md-4">
@@ -35,7 +35,7 @@
                     <input type="text" class="form-control" id="validationCustomUsername"
                         aria-describedby="inputGroupPrepend" ng-model="usuario.email" required>
                     <div class="invalid-feedback">
-                        Please choose a email.
+                        indique um email.
                     </div>
                 </div>
             </div>
@@ -43,7 +43,7 @@
                 <label for="validationCustom03" class="form-label">Telefone</label>
                 <input type="text" class="form-control" id="validationCustom03" ng-model="usuario.telefone" required>
                 <div class="invalid-feedback">
-                    Please provide a valid telefone.
+                    Informe um telefone válido.
                 </div>
             </div>
             <div class="col-md-3">
@@ -57,24 +57,24 @@
                     <option>Pará</option>
                 </select>
                 <div class="invalid-feedback">
-                    Please select a Estado.
+                    Selecione um Estado.
                 </div>
             </div>
             <div class="col-md-3">
                 <label for="validationCustom05" class="form-label">Nascimento</label>
                 <input type="text" class="form-control" id="validationCustom05" ng-model="usuario.nascimento" required>
                 <div class="invalid-feedback">
-                    Please provide a valid data de nascimento.
+                    data de nascimento inválida!
                 </div>
             </div>
             <div class="col-12">
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
                     <label class="form-check-label" for="invalidCheck">
-                        Agree to terms and conditions
+                        Confirmo todas as informações prestadas, na forma da lei.
                     </label>
                     <div class="invalid-feedback">
-                        You must agree before submitting.
+                        Você deve confirmar suas informações antes de enviar.
                     </div>
                 </div>
             </div>
