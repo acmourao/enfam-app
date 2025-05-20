@@ -12,7 +12,7 @@ class UsuarioDAO extends DAO
      */
     function getAll()
     {
-        return parent::select("SELECT * FROM educaenfam.vwUsuarios limit " . $GLOBALS["MAX_LISTA"], "Model\UsuarioModel");
+        return parent::select("SELECT * FROM educaenfam.vwUsuarios limit " . $GLOBALS["MAX_LISTA"], UsuarioModel::class);
     }
 
     /**
@@ -21,7 +21,7 @@ class UsuarioDAO extends DAO
 
     function get($id)
     {
-        return parent::where("SELECT * FROM educaenfam.vwUsuarios WHERE id = ?", [$id], "Model\UsuarioModel");
+        return parent::where("SELECT * FROM educaenfam.vwUsuarios WHERE id = ?", [$id], UsuarioModel::class);
     }
 
     function post($request)
@@ -31,6 +31,6 @@ class UsuarioDAO extends DAO
 
     public function filtro($nome)
     {
-        return parent::where("call buscaNomeEmailUserLike(?)", $nome, "Model\UsuarioModel");
+        return parent::where("call buscaNomeEmailUserLike(?)", $nome, UsuarioModel::class);
     }
 }

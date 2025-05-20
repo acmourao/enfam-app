@@ -1,4 +1,4 @@
-app.service('HttpService', ['$rootScope', '$http', function ($rootScope, $http) {
+app.service('httpService', ['$http', function ($http) {
 
     this.get = function ($url) {
         var arr = [];
@@ -20,7 +20,7 @@ app.service('HttpService', ['$rootScope', '$http', function ($rootScope, $http) 
 
     this.post = function ($url, $req) {
         return $http.post($url, $req).then(function (response) {
-            return response.statusText
+            return response.statusText;
         });
     }
 

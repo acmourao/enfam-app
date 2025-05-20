@@ -1,7 +1,7 @@
 <?php include_once '../../includes/cabecalho.php' ?>
 
 <main>
-    <div class="container-xxl bd-gutter mt-3 bd-layout" ng-controller="userController"
+    <div class="container-xxl bd-gutter mt-3 bd-layout" ng-controller="usuarioController"
         ng-init="buscarById(<?php echo $_GET['id']; ?>)">
         <h4>
             Cadastro do Usuário - {{usuario.id}} - {{usuario.nome}}

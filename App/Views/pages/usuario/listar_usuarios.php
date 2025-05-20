@@ -1,7 +1,7 @@
 <?php include_once '../../includes/cabecalho.php' ?>
 
 <main>
-    <div class="container-xxl bd-gutter mt-3 bd-layout" ng-controller="userController" ng-init="init()">
+    <div class="container-xxl bd-gutter mt-3 bd-layout" ng-controller="usuarioController" ng-init="init()">
         <h4>
             Lista de Usuários
         </h4>
@@ -48,7 +48,7 @@
                         <button type="button" id='closeModalButton' class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-primary" ng-click="save()">Gravar</button>
                     </div>
-                    <div>{{ msg.$$state.value }}</div>
+                    <div>{{ msg }}</div>
                 </div>
             </div>
         </div>

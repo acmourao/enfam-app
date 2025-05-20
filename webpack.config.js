@@ -4,10 +4,10 @@ module.exports = {
     mode: 'production',
     entry: {
         app: [
-            './assets/js/services/services.js',
-            './assets/js/services/usuarios/servicesUsuario.js',
-            './assets/js/controllers/controllers.js',
-            './assets/js/controllers/usuarios/controllersUsuarios.js',
+            './assets/js/services/httpService.js',
+            './assets/js/services/usuarios/usuarioService.js',
+            './assets/js/controllers/mainController.js',
+            './assets/js/controllers/usuarios/usuarioController.js',
             './assets/js/filters/filters.js'
         ]
     },
