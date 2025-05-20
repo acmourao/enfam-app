@@ -11,9 +11,6 @@
             <div class="col-md-4">
                 <label for="validationCustom01" class="form-label">CPF</label>
                 <input type="text" class="form-control" id="validationCustom01" ng-model="usuario.cpf" required>
-                <div class="valid-feedback">
-                    Tudo ok!
-                </div>
                 <div class="invalid-feedback">
                     forneça um válido cpf com no max 11 caracteres.
                 </div>
@@ -21,9 +18,6 @@
             <div class="col-md-4">
                 <label for="validationCustom02" class="form-label">Nome</label>
                 <input type="text" class="form-control" id="validationCustom02" ng-model="usuario.nome" required>
-                <div class="valid-feedback">
-                    Tudo ok!
-                </div>
                 <div class="invalid-feedback">
                     Nomes devem conter no máximo 120 caracteres.
                 </div>
@@ -43,7 +37,7 @@
                 <label for="validationCustom03" class="form-label">Telefone</label>
                 <input type="text" class="form-control" id="validationCustom03" ng-model="usuario.telefone" required>
                 <div class="invalid-feedback">
-                    Informe um telefone válido.
+                    Informe um telefone para contato.
                 </div>
             </div>
             <div class="col-md-3">
@@ -57,14 +51,14 @@
                     <option>Pará</option>
                 </select>
                 <div class="invalid-feedback">
-                    Selecione um Estado.
+                    Informe o seu estado de origem.
                 </div>
             </div>
             <div class="col-md-3">
-                <label for="validationCustom05" class="form-label">Nascimento</label>
-                <input type="text" class="form-control" id="validationCustom05" ng-model="usuario.nascimento" required>
+                <label for="nascimento" class="form-label">Nascimento</label>
+                <input type="date" class="form-control" id="nascimento" placeholder="dd/MM/yyyy" ng-model="usuario.nascimento" required>
                 <div class="invalid-feedback">
-                    data de nascimento inválida!
+                    Informe a data de nascimento.
                 </div>
             </div>
             <div class="col-12">
@@ -73,9 +67,6 @@
                     <label class="form-check-label" for="invalidCheck">
                         Confirmo todas as informações prestadas, na forma da lei.
                     </label>
-                    <div class="invalid-feedback">
-                        Você deve confirmar suas informações antes de enviar.
-                    </div>
                 </div>
             </div>
             <div class="col-12">

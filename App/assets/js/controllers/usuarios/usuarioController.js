@@ -1,5 +1,6 @@
 app.controller('usuarioController', ['$scope', 'usuarioService', function ($scope, userService) {
 
+
     $scope.init = function () {
         $scope.usuarios = userService.get();
     }

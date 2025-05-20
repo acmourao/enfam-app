@@ -8,7 +8,9 @@ module.exports = {
             './assets/js/services/usuarios/usuarioService.js',
             './assets/js/controllers/mainController.js',
             './assets/js/controllers/usuarios/usuarioController.js',
-            './assets/js/filters/filters.js'
+            './assets/js/modules/angular-locale_pt-br.js',
+            './assets/js/modules/directives.js',
+            './assets/js/modules/filters.js'
         ]
     },
     output: {
