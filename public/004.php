@@ -16,7 +16,7 @@ if (isset($_POST['enviar-formulario'])) {
             echo "<li> $erro </li>";
         endforeach;
     } else {
-        header("Location: /exemplos/005.php?nome=$nome&email=$email");
+        header("Location: /005.php?nome=$nome&email=$email");
         die();
     };
 }; ?>

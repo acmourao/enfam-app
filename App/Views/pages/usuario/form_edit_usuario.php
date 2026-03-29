@@ -7,7 +7,7 @@
             Cadastro do Usuário - {{usuario.id}} - {{usuario.nome}}
         </h4>
 
-        <form class="row g-3 needs-validation" novalidate>
+        <form ng-submit="save()" class="row g-3 needs-validation">
             <div class="col-md-4">
                 <label for="validationCustom01" class="form-label">CPF</label>
                 <input type="text" class="form-control" id="validationCustom01" ng-model="usuario.cpf" required>

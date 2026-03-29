@@ -1,4 +1,5 @@
 <html lang="pt-br" data-bs-theme="dark" ng-app="sampleApp">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +9,11 @@
     <title>educaenfam - Sistema de Gestão Escolar para o ENFAM</title>
     <?php include_once 'css_config.php' ?>
 </head>
+
 <body>
     <header>
         <div class="container p-1 bg-secundary text-white text-center">
-            <img class="img-fluid" src="/assets/img/logo.png" height=auto>
+            <img class="img-fluid" src="http://localhost/assets/img/logo.png" height=auto>
             <h4>Escola Nacional de Formação de Magistrados</h4>
             <div class="row">
                 <div class="col-sm-8">

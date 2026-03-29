@@ -10,7 +10,7 @@ app.service('usuarioService', ['httpService', '$rootScope', function ($httpServi
 
     this.save = function ($req) {
         try {
-            $httpService.post('/usuario/save', $req);
+            $httpService.post('/usuario/post', $req);
             return "OK";
         }
         catch (e) {

@@ -1,5 +1,5 @@
 module.exports = {
-    context: __dirname + '/App',
+    context: __dirname + '/public',
     name: 'sampleApp',
     mode: 'production',
     entry: {
@@ -14,7 +14,7 @@ module.exports = {
         ]
     },
     output: {
-        path: __dirname + '/App/assets/js/vendor',
+        path: __dirname + '/public/assets/js/vendor',
         filename: 'bundle.js'
     },
     plugins: [
