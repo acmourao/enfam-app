@@ -2,10 +2,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Aula JS">
+    <meta name="description" content="educaenfam - Sistema de Gestão Escolar para o ENFAM">
     <meta name="author" content="Anderson C M">
     <meta name="generator" content="Anderson 0.84.0">
-    <title>Sample App AngularJS 1.8</title>
+    <title>educaenfam - Sistema de Gestão Escolar para o ENFAM</title>
     <?php include_once 'css_config.php' ?>
 </head>
 <body>

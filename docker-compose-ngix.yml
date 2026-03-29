@@ -1,15 +1,14 @@
 services:
-  apache2:
-    build: ./apache2/
-    container_name: apache2
+  nginx:
+    build: ./nginx/
+    container_name: nginx
     ports:
       - 80:80
     depends_on:
       - php
-      - mysql
+      - mysql 
     volumes:
-      - ./App:/var/www/
-      - ./public:/var/www/html/      
+      - ./App:/var/www/html/
 
   php:
     build: ./php/
@@ -17,8 +16,7 @@ services:
     expose:
       - 9000
     volumes:
-      - ./App:/var/www/
-      - ./public:/var/www/html/  
+      - ./App:/var/www/html/
 
   mysql:
     build: ./mysql/
@@ -26,7 +24,7 @@ services:
     ports:
       - 3306:3306
     volumes:
-      - mysql-data:/var/lib/mysql
+      - ./mysql-data:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: educaenfam
@@ -36,5 +34,3 @@ services:
 volumes:
   mysql-data:
   App:
-  public:
-  
