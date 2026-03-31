@@ -3,6 +3,7 @@ app.controller('usuarioController', ['$scope', 'usuarioService', function ($scop
 
     $scope.init = function () {
         $scope.usuarios = userService.get();
+        $scope.ufs = userService.ufs();
     }
 
     $scope.buscarById = function ($id) {

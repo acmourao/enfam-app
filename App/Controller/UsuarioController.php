@@ -10,8 +10,7 @@ class UsuarioController extends Controller
     {
         parent::isProtected();
 
-        $lista = (new UsuarioDAO)->getAll();
-        parent::jsonOutput($lista);
+        parent::jsonOutput((new UsuarioDAO)->getAll());
     }
     public static function get($id)
     {
@@ -19,10 +18,10 @@ class UsuarioController extends Controller
 
         parent::jsonOutput((new UsuarioDAO)->get($id));
     }
-    public static function post()
+    public static function save()
     {
         parent::isProtected();
 
-        return parent::jsonOutput((new UsuarioDAO)->post(parent::request()));
+        return parent::jsonOutput((new UsuarioDAO)->save(parent::request()));
     }
 }

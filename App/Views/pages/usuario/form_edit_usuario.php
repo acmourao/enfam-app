@@ -9,24 +9,24 @@
 
         <form ng-submit="save()" class="row g-3 needs-validation">
             <div class="col-md-4">
-                <label for="validationCustom01" class="form-label">CPF</label>
-                <input type="text" class="form-control" id="validationCustom01" ng-model="usuario.cpf" required>
+                <label for="cpf" class="form-label">CPF</label>
+                <input type="text" class="form-control" id="cpf" ng-model="usuario.cpf" required>
                 <div class="invalid-feedback">
                     forneça um válido cpf com no max 11 caracteres.
                 </div>
             </div>
             <div class="col-md-4">
-                <label for="validationCustom02" class="form-label">Nome</label>
-                <input type="text" class="form-control" id="validationCustom02" ng-model="usuario.nome" required>
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="nome" ng-model="usuario.nome" required>
                 <div class="invalid-feedback">
                     Nomes devem conter no máximo 120 caracteres.
                 </div>
             </div>
             <div class="col-md-4">
-                <label for="validationCustomUsername" class="form-label">eMail</label>
+                <label for="email" class="form-label">eMail</label>
                 <div class="input-group has-validation">
                     <span class="input-group-text" id="inputGroupPrepend">@</span>
-                    <input type="text" class="form-control" id="validationCustomUsername"
+                    <input type="text" class="form-control" id="email"
                         aria-describedby="inputGroupPrepend" ng-model="usuario.email" required>
                     <div class="invalid-feedback">
                         indique um email.
@@ -34,21 +34,19 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <label for="validationCustom03" class="form-label">Telefone</label>
-                <input type="text" class="form-control" id="validationCustom03" ng-model="usuario.telefone" required>
+                <label for="telefone" class="form-label">Telefone</label>
+                <input type="text" class="form-control" id="telefone" ng-model="usuario.telefone" required>
                 <div class="invalid-feedback">
                     Informe um telefone para contato.
                 </div>
             </div>
             <div class="col-md-3">
-                <label for="validationCustom04" class="form-label">Naturalidade</label>
-                <select class="form-select" id="validationCustom04" required>
+                <label for="uf" class="form-label">Naturalidade</label>
+                <select ng-model="usuario.uf" class="form-select" id="uf" required>
                     <option selected disabled value="">:. Selecione .:</option>
-                    <option>Acre</option>
-                    <option>Bahia</option>
-                    <option>Aracajú</option>
-                    <option>DF</option>
-                    <option>Pará</option>
+                    <option ng-repeat="uf in ufs" value="{{uf.sigla}}">
+                        {{uf.nome}}
+                    </option>
                 </select>
                 <div class="invalid-feedback">
                     Informe o seu estado de origem.
