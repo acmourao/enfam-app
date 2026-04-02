@@ -1,0 +1,40 @@
+services:
+  apache2:
+    build: ./apache2/
+    container_name: apache2
+    ports:
+      - 80:80
+    depends_on:
+      - php
+      - mysql
+    volumes:
+      - ./App:/var/www/
+      - ./public:/var/www/html/      
+
+  php:
+    build: ./php/
+    container_name: php
+    expose:
+      - 9000
+    volumes:
+      - ./App:/var/www/
+      - ./public:/var/www/html/  
+
+  mysql:
+    build: ./mysql/
+    container_name: mysql
+    ports:
+      - 3306:3306
+    volumes:
+      - mysql-data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: educaenfam
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      host_cache_size: 0
+
+volumes:
+  mysql-data:
+  App:
+  public:
+  

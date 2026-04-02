@@ -8,6 +8,7 @@
 !/php
 !.env
 !docker-compose.yml
+!docker-compose-apache.yml
 !docker-compose-ngix.yml
 !.gitignore
 !composer.json

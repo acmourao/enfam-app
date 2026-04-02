@@ -1,11 +1,14 @@
 <?php
 
+#[AllowDynamicProperties]
+class UsuarioModel extends stdClass {}
+
 try {
 
     //$dsn = "mysql:host=172.18.0.1:3306;dbname=educaenfam;charset=UTF8";
     $dsn = "mysql:host=mysql:3306;dbname=educaenfam;charset=UTF8";
-    $conexao = new PDO($dsn, 'root', 'root', [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
-    $conexao->setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND, "SET NAMES 'utf8'");
+    $pdo = new PDO($dsn, 'root', 'root', [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
+    $pdo->setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND, "SET NAMES 'utf8'");
 
     // $conexao->beginTransaction();
 
@@ -24,7 +27,20 @@ try {
 
     // $conexao->commit();
 
-    echo "Deu certo. Conectado! " . $dsn;
+    $sql = 'SELECT * FROM educaenfam.vwusuarios where id=1;';
+
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->fetchAll(PDO::FETCH_CLASS, UsuarioModel::class);
+
+    //header('Content-Type: application/json');
+    echo json_encode($result, JSON_UNESCAPED_LINE_TERMINATORS);
+
+    //var_dump($result);
+    // while ($stmt->fetch(\PDO::FETCH_BOUND)) {
+    //     print join("\t", [$userId, $name, $country, ($referrerName ?? 'NULL')]) . "\n";
+    // }
+    //echo "Deu certo. Conectado! " . $dsn;
 } catch (Exception $ex) {
 
     echo $ex->getMessage();
@@ -50,15 +66,7 @@ try {
 // } 
 // unset($pdo);
 
-// $sql = 'select
-//         product_id,
-//         product_name,
-//         retail_price                                 
-//         from products
-//        ';
 
-// $stmt = $pdo->prepare($sql);
-// $stmt->execute();
 
 // $products = [];
 

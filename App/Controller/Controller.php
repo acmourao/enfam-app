@@ -10,10 +10,10 @@ abstract class Controller
             header("Location: /error.php");
     }
 
-    protected static function jsonOutput($scope)
+    protected static function jsonOutput($data)
     {
         header('Content-Type: application/json');
-        echo json_encode($scope, JSON_UNESCAPED_LINE_TERMINATORS );
+        echo json_encode($data, JSON_UNESCAPED_LINE_TERMINATORS);
     }
 
     protected static function request()
