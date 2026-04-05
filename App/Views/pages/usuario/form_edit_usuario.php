@@ -2,7 +2,7 @@
 
 <main>
     <div class="container-xxl bd-gutter mt-3 bd-layout" ng-controller="usuarioController"
-        ng-init="buscarById(<?php echo $_GET['id']; ?>)">
+        ng-init="buscarUserById(<?php echo $_GET['id']; ?>)">
         <h4>
             Cadastro do Usuário - {{usuario.id}} - {{usuario.nome}}
         </h4>
@@ -26,7 +26,7 @@
                 <label for="email" class="form-label">eMail</label>
                 <div class="input-group has-validation">
                     <span class="input-group-text" id="inputGroupPrepend">@</span>
-                    <input type="text" class="form-control" id="email"
+                    <input type="text" autocomplete="email" class="form-control" id="email"
                         aria-describedby="inputGroupPrepend" ng-model="usuario.email" required>
                     <div class="invalid-feedback">
                         indique um email.
@@ -41,11 +41,11 @@
                 </div>
             </div>
             <div class="col-md-3">
-                <label for="uf" class="form-label">Naturalidade</label>
-                <select ng-model="usuario.uf" class="form-select" id="uf" required>
+                <label for="remember_token" class="form-label">remember_token</label>
+                <select ng-model="usuario.remember_token" class="form-select" id="remember_token" required>
                     <option selected disabled value="">:. Selecione .:</option>
                     <option ng-repeat="uf in ufs" value="{{uf.sigla}}">
-                        {{uf.nome}}
+                        {{uf.estado}}
                     </option>
                 </select>
                 <div class="invalid-feedback">

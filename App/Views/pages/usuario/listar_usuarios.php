@@ -27,7 +27,7 @@
                     <td class="table-danger"> {{ usr.nascimento | validate  | date: 'dd/MM/yyyy' }} </td>
                     <td>
                         <i ng-click="editar(usr.id)" class="bi bi-blockquote-left align-middle text-center" style="font-size: 18px; color: rgb(13, 204, 140);"></i>
-                        <i ng-click="buscarById(usr.id)" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="bi bi-box-arrow-in-up-right align-middle text-center" style="font-size: 18px; color: rgb(13, 204, 140);"></i>
+                        <i ng-click="buscarUserById(usr.id)" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="bi bi-box-arrow-in-up-right align-middle text-center" style="font-size: 18px; color: rgb(13, 204, 140);"></i>
                     </td>
                 </tr>
             </tbody>

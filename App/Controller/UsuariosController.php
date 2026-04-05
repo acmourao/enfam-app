@@ -2,26 +2,25 @@
 
 namespace Controller;
 
-use DAO\UsuarioDAO;
+use DAO\UsuariosDAO;
 
-class UsuarioController extends Controller
+class UsuariosController extends Controller
 {
     public static function index()
     {
         parent::isProtected();
 
-        parent::jsonOutput((new UsuarioDAO)->getAll());
+        parent::jsonOutput((new UsuariosDAO)->getAll());
     }
     public static function get($id)
     {
         parent::isProtected();
 
-        parent::jsonOutput((new UsuarioDAO)->get($id));
+        parent::jsonOutput((new UsuariosDAO)->get($id));
     }
     public static function save()
     {
         parent::isProtected();
-
-        return parent::jsonOutput((new UsuarioDAO)->save(parent::request()));
+        return parent::jsonOutput((new UsuariosDAO)->save(parent::request()));
     }
 }

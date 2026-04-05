@@ -1,13 +1,15 @@
-app.controller('usuarioController', ['$scope', 'usuarioService', function ($scope, userService) {
+app.controller('usuarioController', ['$scope', 'usuarioService', 'estadoService', function ($scope, userService, estadoService) {
 
+    $scope.usuarios = [];
+    $scope.ufs = [];
 
     $scope.init = function () {
         $scope.usuarios = userService.get();
-        $scope.ufs = userService.ufs();
     }
 
-    $scope.buscarById = function ($id) {
+    $scope.buscarUserById = function ($id) {
         $scope.usuario = userService.getUnique($id);
+        $scope.ufs = estadoService.get();
     }
 
     $scope.editar = function ($id) {
@@ -15,6 +17,8 @@ app.controller('usuarioController', ['$scope', 'usuarioService', function ($scop
     }
 
     $scope.save = function () {
+
+        //console.log($scope.usuario);
         $scope.msg = (userService.save($scope.usuario));
 
         if ($scope.msg == 'OK') {

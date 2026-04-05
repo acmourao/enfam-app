@@ -31,9 +31,9 @@ try {
 
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
-    $result = $stmt->fetchAll(PDO::FETCH_CLASS, UsuarioModel::class);
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    //header('Content-Type: application/json');
+    header('Content-Type: application/json');
     echo json_encode($result, JSON_UNESCAPED_LINE_TERMINATORS);
 
     //var_dump($result);

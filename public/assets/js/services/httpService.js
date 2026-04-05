@@ -18,7 +18,7 @@ app.service('httpService', ['$http', function ($http) {
         return obj
     }
 
-    this.post = function ($url, $req) {
+    this.save = function ($url, $req) {
         return $http.post($url, $req).then(function (response) {
             return response.statusText;
         });

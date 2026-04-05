@@ -3,19 +3,19 @@
 use Controller\{
     HomeController,
     LoginController,
-    UsuarioController,
-    ConfigController
+    UsuariosController,
+    EstadosController
 };
 
 try {
     switch ($uri_parse) {
         // Rotas para serviços de usuários
         case '/ufs':
-            ConfigController::index();
+            EstadosController::index();
             break;
         // Rotas para serviços de usuários
         case '/usuarios':
-            UsuarioController::index();
+            UsuariosController::index();
             break;
         // login de usuários
         case '/login':
@@ -35,17 +35,17 @@ try {
             if ($path[0] == 'usuario') {
                 if ($path[1] == 'get') {
                     if (is_numeric($path[2])) {
-                        UsuarioController::get($path[2]);
+                        UsuariosController::get($path[2]);
                     }
                 }
                 if (($path[1] == 'save')) {
-                    UsuarioController::save();
+                    UsuariosController::save();
                 }
             } else {
                 if ($path[0] == 'uf') {
                     if ($path[1] == 'get') {
                         if (is_numeric($path[2])) {
-                            ConfigController::get($path[2]);
+                            EstadosController::get($path[2]);
                         }
                     }
                 } else {

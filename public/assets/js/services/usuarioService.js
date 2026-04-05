@@ -8,15 +8,8 @@ app.service('usuarioService', ['httpService', '$rootScope', function ($httpServi
         return $httpService.getUnique('/usuario/get/' + $id)
     }
 
-    this.ufs = function () {
-        return $httpService.get("/ufs")
-    }
-
-    this.getUf = function ($id) {
-        return $httpService.getUnique('/uf/get/' + $id)
-    }
-
     this.save = function ($req) {
+        // console.log($req);
         try {
             $httpService.save('/usuario/save', $req);
             return "OK";

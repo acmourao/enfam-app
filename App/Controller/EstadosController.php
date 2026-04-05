@@ -2,18 +2,18 @@
 
 namespace Controller;
 
-use DAO\UfDAO;
+use DAO\EstadosDAO;
 
-class ConfigController extends Controller
+class EstadosController extends Controller
 {
     public static function index()
     {
         parent::isProtected();
-        parent::jsonOutput((new UfDAO)->getAll());
+        parent::jsonOutput((new EstadosDAO)->getAll());
     }
     public static function get($sigla)
     {
         parent::isProtected();
-        parent::jsonOutput((new UfDAO)->get($sigla));
+        parent::jsonOutput((new EstadosDAO)->get($sigla));
     }
 }
