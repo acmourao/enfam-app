@@ -1,3 +1,23 @@
+app.directive('mysqlDate', function () {
+    return {
+        require: 'ngModel',
+        link: function (scope, element, attrs, ngModel) {
+            ngModel.$formatters.push(function (fromModel) {
+                if (fromModel == null || fromModel == "0000-00-00")
+                    return null;
+                let parts = fromModel.split('/');
+                fromModel = new Date(parts[1] + '/' + parts[0] + '/' + parts[2]);
+                return fromModel;
+            });
+            ngModel.$parsers.push(function (fromField) {
+                console.log('fromField : ', fromField);
+                fromField = fromField.getFullYear() + '-' + (fromField.getMonth() + 1).toString().padStart(2, '0') + '-' + fromField.getDate().toString().padStart(2, '0');
+                return fromField;
+            });
+        }
+    }
+});
+
 app.directive('maskCompanyPin', function () {
     return {
         restrict: 'A',

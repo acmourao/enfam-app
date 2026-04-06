@@ -3,6 +3,8 @@
 namespace DAO;
 
 use DateTime;
+use DateTimeFormatter;
+use LocalDate;
 
 class UsuariosDAO extends DAO
 {
@@ -12,7 +14,7 @@ class UsuariosDAO extends DAO
      */
     function getAll()
     {
-        return parent::select("SELECT * FROM educaenfam.vwusuarios limit " . $GLOBALS["MAX_LISTA"]);
+        return parent::select("SELECT * FROM educaenfam.vwusuarios limit " . $GLOBALS["MAX_LISTA"]);;
     }
 
     /**
@@ -26,21 +28,10 @@ class UsuariosDAO extends DAO
 
     function save($request)
     {
-        //  $date = $_POST['user_date']; // Automatically formatted as 'YYYY-MM-DD'
-
-        // 1. Create a DateTime object from the specific 'd/m/Y' format
-        $date = DateTime::createFromFormat('d/m/Y', $request->nascimento);
-
-        // // 2. Format it to 'Y-m-d' for MySQL
-        if ($date) {
-            $mysqlDate = $date->format('Y-m-d');
-            // Output: 1995-12-31
-        } else {
-            // Handle the error if the date format is incorrect
-            return "Data de nascimento inválida. Use o formato dd/MM/yyyy.";
-        }
-
-        return parent::update("UPDATE educaenfam.usuarios SET nascimento = ? WHERE id = ?", [$mysqlDate, $request->id]);
+        $phpdate = strtotime($request->nascimento);
+        //        $mysqldate = date('Y-m-d H:i:s', $phpdate);
+        $mysqldate = date('Y-m-d', $phpdate);
+        return parent::update("UPDATE educaenfam.usuarios SET nascimento = ? WHERE id = ?", [$mysqldate, $request->id]);
     }
 
     public function filtro($nome)

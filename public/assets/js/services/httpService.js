@@ -1,11 +1,12 @@
-app.service('httpService', ['$http', function ($http) {
+app.service('httpService', ['$rootScope', '$http', function ($rootScope, $http) {
 
     this.get = function ($url) {
         var arr = [];
         $http.get($url)
             .then(function (response) {
-                response.data.forEach((element) => arr.push(element))
-            })
+                $rootScope.debug = response.data.length + " registros recebidos de " + $url;
+                response.data.forEach((element) => arr.push(element));
+            });
         return arr
     }
 
@@ -14,7 +15,7 @@ app.service('httpService', ['$http', function ($http) {
         $http.get($url)
             .then(function (response) {
                 Object.assign(obj, response.data[0])
-            })
+            });
         return obj
     }
 

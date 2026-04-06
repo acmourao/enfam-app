@@ -1,4 +1,4 @@
-app.service('estadoService', ['httpService', '$rootScope', function ($httpService) {
+app.service('estadoService', ['httpService', function ($httpService) {
 
     this.get = function () {
         return $httpService.get("/ufs")

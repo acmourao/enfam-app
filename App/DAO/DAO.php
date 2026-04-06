@@ -17,19 +17,28 @@ class DAO
     function select($qry)
     {
         $stmt = self::$db->query($qry);
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $retorno = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        if (isset($_SESSION["debug"]))
+            $retorno[0]["_query"] = $qry;
+        return $retorno;
     }
 
     function where($qry, $param)
     {
         $stmt = self::$db->prepare($qry);
         $stmt->execute($param);
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $retorno = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        if (isset($_SESSION["debug"]))
+            $retorno[0]["_query"] = $qry;
+        return $retorno;
     }
 
     function update($qry, $param)
     {
         $stmt = self::$db->prepare($qry);
-        return $stmt->execute($param);
+        $retorno = $stmt->execute($param);
+        if (isset($_SESSION["debug"]))
+            $retorno = $qry;
+        return $retorno;
     }
 }

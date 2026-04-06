@@ -1,4 +1,4 @@
-app.service('cadastroService', ['$rootScope', 'usuarioService', 'estadoService', function ($rootScope, $usuarioService, $estadoService) {
+app.service('cadastroService', ['usuarioService', 'estadoService', function ($usuarioService, $estadoService) {
 
     this.getUsuarios = function () {
         return $usuarioService.get();

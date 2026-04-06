@@ -54,7 +54,7 @@
             </div>
             <div class="col-md-3">
                 <label for="nascimento" class="form-label">Nascimento</label>
-                <input type="date" class="form-control" id="nascimento" placeholder="dd/MM/yyyy" ng-model="usuario.nascimento" required>
+                <input type="date" mysql-date class="form-control" id="nascimento" ng-model="usuario.nascimento" required>
                 <div class="invalid-feedback">
                     Informe a data de nascimento.
                 </div>

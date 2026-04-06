@@ -21,10 +21,10 @@
                 <tr ng-repeat="usr in usuarios track by usr.id">
                     <td class="table-active"> {{ usr.id }}</td>
                     <td class="table-light"> {{ usr.nome }} </td>
-                    <td class="table-warning"> {{ usr.cpf }}</td>
+                    <td class="table-warning"> {{ usr.cpf | cpfCnpj }}</td>
                     <td class="table-info"> {{ usr.email }} </td>
-                    <td class="table-success"> {{ usr.telefone }} </td>
-                    <td class="table-danger"> {{ usr.nascimento | validate  | date: 'dd/MM/yyyy' }} </td>
+                    <td class="table-success"> {{ usr.telefone | phone }} </td>
+                    <td class="table-danger"> {{ usr.nascimento | validate }} </td>
                     <td>
                         <i ng-click="editarUsuario(usr.id)" class="bi bi-blockquote-left align-middle text-center" style="font-size: 18px; color: rgb(13, 204, 140);"></i>
                         <i ng-click="buscarUserById(usr.id)" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="bi bi-box-arrow-in-up-right align-middle text-center" style="font-size: 18px; color: rgb(13, 204, 140);"></i>
