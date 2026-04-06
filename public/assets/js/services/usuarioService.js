@@ -9,7 +9,6 @@ app.service('usuarioService', ['httpService', '$rootScope', function ($httpServi
     }
 
     this.save = function ($req) {
-        // console.log($req);
         try {
             $httpService.save('/usuario/save', $req);
             return "OK";

@@ -9,13 +9,11 @@ class UsuariosController extends Controller
     public static function index()
     {
         parent::isProtected();
-
         parent::jsonOutput((new UsuariosDAO)->getAll());
     }
     public static function get($id)
     {
         parent::isProtected();
-
         parent::jsonOutput((new UsuariosDAO)->get($id));
     }
     public static function save()

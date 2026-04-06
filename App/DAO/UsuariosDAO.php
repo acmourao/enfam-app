@@ -2,6 +2,8 @@
 
 namespace DAO;
 
+use DateTime;
+
 class UsuariosDAO extends DAO
 {
 
@@ -24,7 +26,21 @@ class UsuariosDAO extends DAO
 
     function save($request)
     {
-        return parent::update("UPDATE educaenfam.usuarios SET remember_token = ? WHERE id = ?", [$request->remember_token, $request->id]);
+        //  $date = $_POST['user_date']; // Automatically formatted as 'YYYY-MM-DD'
+
+        // 1. Create a DateTime object from the specific 'd/m/Y' format
+        $date = DateTime::createFromFormat('d/m/Y', $request->nascimento);
+
+        // // 2. Format it to 'Y-m-d' for MySQL
+        if ($date) {
+            $mysqlDate = $date->format('Y-m-d');
+            // Output: 1995-12-31
+        } else {
+            // Handle the error if the date format is incorrect
+            return "Data de nascimento inválida. Use o formato dd/MM/yyyy.";
+        }
+
+        return parent::update("UPDATE educaenfam.usuarios SET nascimento = ? WHERE id = ?", [$mysqlDate, $request->id]);
     }
 
     public function filtro($nome)

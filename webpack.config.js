@@ -7,6 +7,7 @@ module.exports = {
             './assets/js/services/httpService.js',
             './assets/js/services/usuarioService.js',
             './assets/js/services/estadoService.js',
+            './assets/js/services/cadastroService.js',
             './assets/js/controllers/mainController.js',
             './assets/js/controllers/usuarioController.js',
             './assets/js/modules/angular-locale_pt-br.js',

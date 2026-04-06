@@ -1,25 +1,24 @@
-app.controller('usuarioController', ['$scope', 'usuarioService', 'estadoService', function ($scope, userService, estadoService) {
+app.controller('usuarioController', ['$scope', 'cadastroService', function ($scope, cadastroService) {
 
     $scope.usuarios = [];
     $scope.ufs = [];
 
     $scope.init = function () {
-        $scope.usuarios = userService.get();
+        $scope.usuarios = cadastroService.getUsuarios();
     }
 
     $scope.buscarUserById = function ($id) {
-        $scope.usuario = userService.getUnique($id);
-        $scope.ufs = estadoService.get();
+        $scope.usuario = cadastroService.getUsuarioUnique($id);
+        $scope.ufs = cadastroService.getEstados();
     }
 
-    $scope.editar = function ($id) {
+    $scope.editarUsuario = function ($id) {
         window.location.assign('form_edit_usuario.php?id=' + $id);
     }
 
-    $scope.save = function () {
+    $scope.salvarUsuario = function () {
 
-        //console.log($scope.usuario);
-        $scope.msg = (userService.save($scope.usuario));
+        $scope.msg = (cadastroService.save($scope.usuario));
 
         if ($scope.msg == 'OK') {
             appInfo('registro salvo com sucesso!');

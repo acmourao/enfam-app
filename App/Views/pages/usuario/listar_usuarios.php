@@ -26,7 +26,7 @@
                     <td class="table-success"> {{ usr.telefone }} </td>
                     <td class="table-danger"> {{ usr.nascimento | validate  | date: 'dd/MM/yyyy' }} </td>
                     <td>
-                        <i ng-click="editar(usr.id)" class="bi bi-blockquote-left align-middle text-center" style="font-size: 18px; color: rgb(13, 204, 140);"></i>
+                        <i ng-click="editarUsuario(usr.id)" class="bi bi-blockquote-left align-middle text-center" style="font-size: 18px; color: rgb(13, 204, 140);"></i>
                         <i ng-click="buscarUserById(usr.id)" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="bi bi-box-arrow-in-up-right align-middle text-center" style="font-size: 18px; color: rgb(13, 204, 140);"></i>
                     </td>
                 </tr>
@@ -42,11 +42,23 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        {{ usuario.cpf }} - {{ usuario.nome }} - {{ usuario.email }}
+                        {{ usuario.cpf }} - {{ usuario.nome }} - {{ usuario.email }} - {{ usuario.remember_token }}
+                    </div>
+                    <div class="col-md-3">
+                        <label for="remember_token" class="form-label">remember_token</label>
+                        <select ng-model="usuario.remember_token" class="form-select" id="remember_token" required>
+                            <option selected disabled value="">:. Selecione .:</option>
+                            <option ng-repeat="uf in ufs" value="{{uf.sigla}}">
+                                {{uf.estado}}
+                            </option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Informe o seu estado de origem.
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" id='closeModalButton' class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary" ng-click="save()">Gravar</button>
+                        <button type="button" class="btn btn-primary" ng-click="salvarUsuario()">Gravar</button>
                     </div>
                     <div>{{ msg }}</div>
                 </div>

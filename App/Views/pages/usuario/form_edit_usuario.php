@@ -7,7 +7,7 @@
             Cadastro do Usuário - {{usuario.id}} - {{usuario.nome}}
         </h4>
 
-        <form ng-submit="save()" class="row g-3 needs-validation">
+        <form ng-submit="salvarUsuario()" class="row g-3 needs-validation">
             <div class="col-md-4">
                 <label for="cpf" class="form-label">CPF</label>
                 <input type="text" class="form-control" id="cpf" ng-model="usuario.cpf" required>
