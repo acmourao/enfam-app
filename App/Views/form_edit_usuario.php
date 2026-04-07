@@ -1,4 +1,4 @@
-<?php include_once '../../includes/cabecalho.php' ?>
+<?php include_once '../includes/cabecalho.php' ?>
 
 <main>
     <div class="container-xxl bd-gutter mt-3 bd-layout" ng-controller="usuarioController"
@@ -10,7 +10,7 @@
         <form ng-submit="salvarUsuario()" class="row g-3 needs-validation">
             <div class="col-md-4">
                 <label for="cpf" class="form-label">CPF</label>
-                <input type="text" class="form-control" id="cpf" ng-model="usuario.cpf" required>
+                <input type="text" cpf-cnpj maxlength="14" class=" form-control" id="cpf" ng-model="usuario.cpf" required>
                 <div class="invalid-feedback">
                     forneça um válido cpf com no max 11 caracteres.
                 </div>
@@ -35,7 +35,7 @@
             </div>
             <div class="col-md-6">
                 <label for="telefone" class="form-label">Telefone</label>
-                <input type="text" class="form-control" id="telefone" ng-model="usuario.telefone" required>
+                <input type="text" mask-phone-number maxlength="15" class="form-control" id="telefone" ng-model="usuario.telefone" required>
                 <div class="invalid-feedback">
                     Informe um telefone para contato.
                 </div>
@@ -73,4 +73,4 @@
         </form>
 </main>
 
-<?php include_once '../../includes/rodape.php' ?>
+<?php include_once '../includes/rodape.php' ?>

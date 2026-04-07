@@ -22,7 +22,7 @@ app.controller('usuarioController', ['$scope', 'cadastroService', function ($sco
 
         if ($scope.msg == 'OK') {
             appInfo('registro salvo com sucesso!');
-            document.getElementById("closeModalButton").click();
+            //document.getElementById("closeModalButton").click();
         }
     }
 

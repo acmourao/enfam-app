@@ -9,8 +9,8 @@ app.filter('datePtBr', function () {
         if (input == "0000-00-00" || input == null) {
             return 'Inválido!';
         }
-        let parts = input.split('/');
-        return parts[0] + '/' + parts[1] + '/' + parts[2];
+        let parts = input.split('-');
+        return parts[2] + '/' + parts[1] + '/' + parts[0];
     };
 });
 
@@ -30,12 +30,12 @@ app.filter('cpfCnpj', function () {
 
 app.filter('phone', function () {
     return function (input) {
-        if (input == "0000000000" || input == "00000000000" || input == null) {
+        if (input == ""  || input == null) {
             return 'Inválido!';
         }
-        if (input.length === 10) {
+        if (input.length == 10) {
             return input.replace(/(\d{2})(\d{4})(\d{4})/, '($1) $2-$3');
-        } else if (input.length === 11) {
+        } else if (input.length == 11) {
             return input.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
         }
         return input;

@@ -10,7 +10,7 @@ app.controller('mainController', ['$scope', '$interval', '$timeout',
             $scope.debug = null;
         }
 
-        $timeout(function () { callAtTimeout() }, 18e4);
+        $timeout(function () { callAtTimeout() }, 72e4);
 
         $interval(function () {
             $scope.ultimoSalvamento = new Date().toLocaleTimeString();

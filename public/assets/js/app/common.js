@@ -435,30 +435,20 @@ function maskCompanyPINBR(pin) {    // Esta eh a function que formata o cnpj.
 
 }
 
-function maskPhoneNumberBR(number) {
+function maskPhoneNumberBR(input) {
 
-    var valor = onlyNumbers(number);
+    input = onlyNumbers(input);
 
-    if (!valor) return "";
-
-    if (valor.length >= 7) {
-
-        var p1 = valor.substring(0, 2);
-        var p2 = valor.substring(2, 6);
-        var p3 = valor.substring(6, 11);
-
-        return "(" + p1 + ")" + p2 + "-" + p3;
-
-    } else if (valor.length >= 3) {
-
-        var p1 = valor.substring(0, 2);
-        var p2 = valor.substring(2);
-
-
-        return "(" + p1 + ")" + p2;
+    if (input == "" || input == null) {
+        return '';
     }
-
-    return valor;
+    if (input.length == 11) {
+        return input.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
+    }
+    if (input.length == 10) {
+        return input.replace(/(\d{2})(\d{4})(\d{4})/, '($1) $2-$3');
+    }
+    return input;
 
 }
 

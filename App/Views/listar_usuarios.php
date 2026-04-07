@@ -1,4 +1,4 @@
-<?php include_once '../../includes/cabecalho.php' ?>
+<?php include_once '../includes/cabecalho.php' ?>
 
 <main>
     <div class="container-xxl bd-gutter mt-3 bd-layout" ng-controller="usuarioController" ng-init="init()">
@@ -24,7 +24,7 @@
                     <td class="table-warning"> {{ usr.cpf | cpfCnpj }}</td>
                     <td class="table-info"> {{ usr.email }} </td>
                     <td class="table-success"> {{ usr.telefone | phone }} </td>
-                    <td class="table-danger"> {{ usr.nascimento | validate }} </td>
+                    <td class="table-danger"> {{ usr.nascimento | datePtBr }} </td>
                     <td>
                         <i ng-click="editarUsuario(usr.id)" class="bi bi-blockquote-left align-middle text-center" style="font-size: 18px; color: rgb(13, 204, 140);"></i>
                         <i ng-click="buscarUserById(usr.id)" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="bi bi-box-arrow-in-up-right align-middle text-center" style="font-size: 18px; color: rgb(13, 204, 140);"></i>
@@ -67,4 +67,4 @@
 
 </main>
 
-<?php include_once '../../includes/rodape.php' ?>
+<?php include_once '../includes/rodape.php' ?>

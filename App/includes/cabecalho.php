@@ -27,9 +27,9 @@
                                 <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Usuários</a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item"
-                                            href="/views/pages/usuario/listar_usuarios.php">Listar</a>
+                                            href="/views/listar_usuarios.php">Listar</a>
                                     </li>
-                                    <li><a class="dropdown-item" href="#">Cadastrar</a></li>
+                                    <li><a class="dropdown-item" href="/views/form_edit_usuario.php">Cadastrar</a></li>
                                     <li><a class="dropdown-item" href="#">Autorizar</a></li>
                                 </ul>
                             </li>

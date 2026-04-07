@@ -1,6 +1,6 @@
 <?php
 
-define("PATH_VIEW", dirname(__FILE__) . '/views/');
+define("PATH_VIEW", dirname(__FILE__) . '/');
 
 date_default_timezone_set('America/Sao_Paulo');
 

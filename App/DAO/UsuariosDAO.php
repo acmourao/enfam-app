@@ -28,10 +28,13 @@ class UsuariosDAO extends DAO
 
     function save($request)
     {
-        $phpdate = strtotime($request->nascimento);
-        //        $mysqldate = date('Y-m-d H:i:s', $phpdate);
-        $mysqldate = date('Y-m-d', $phpdate);
-        return parent::update("UPDATE educaenfam.usuarios SET nascimento = ? WHERE id = ?", [$mysqldate, $request->id]);
+        $mysqldate = null;
+        if (isset($request->nascimento)) {
+            $phpdate = strtotime($request->nascimento);
+            $mysqldate = date('Y-m-d', $phpdate);
+        }
+        return parent::update("UPDATE educaenfam.usuarios SET cpf = ?, nome = ?, email = ?, telefone = ?, remember_token = ?, nascimento = ? " .
+            "WHERE id = ?", [$request->cpf, $request->nome, $request->email, $request->telefone, $request->remember_token, $mysqldate, $request->id]);
     }
 
     public function filtro($nome)
