@@ -26,8 +26,11 @@
                     <td class="table-success"> {{ usr.telefone | phone }} </td>
                     <td class="table-danger"> {{ usr.nascimento | datePtBr }} </td>
                     <td>
-                        <i ng-click="editarUsuario(usr.id)" class="bi bi-blockquote-left align-middle text-center" style="font-size: 18px; color: rgb(13, 204, 140);"></i>
-                        <i ng-click="buscarUserById(usr.id)" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="bi bi-box-arrow-in-up-right align-middle text-center" style="font-size: 18px; color: rgb(13, 204, 140);"></i>
+                        <i ng-click="editarUsuario(usr.id)" class="bi bi-blockquote-left align-middle text-center"
+                            style="font-size: 18px; color: rgb(13, 204, 140);"></i>
+                        <i ng-click="buscarUserById(usr.id)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                            class="bi bi-box-arrow-in-up-right align-middle text-center"
+                            style="font-size: 18px; color: rgb(13, 204, 140);"></i>
                     </td>
                 </tr>
             </tbody>
@@ -43,13 +46,12 @@
                     </div>
                     <div class="modal-body">
                         {{ usuario.cpf }} - {{ usuario.nome }} - {{ usuario.email }} - {{ usuario.remember_token }}
-                    </div>
-                    <div class="col-md-3">
                         <label for="remember_token" class="form-label">remember_token</label>
+                        <hr />
                         <select ng-model="usuario.remember_token" class="form-select" id="remember_token" required>
                             <option selected disabled value="">:. Selecione .:</option>
                             <option ng-repeat="uf in ufs" value="{{uf.sigla}}">
-                                {{uf.estado}}
+                                {{uf.nome}}
                             </option>
                         </select>
                         <div class="invalid-feedback">
@@ -57,10 +59,15 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" id='closeModalButton' class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" id='closeModalButton' class="btn btn-secondary"
+                            data-bs-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-primary" ng-click="salvarUsuario()">Gravar</button>
                     </div>
-                    <div>{{ msg }}</div>
+
+                    <div class="text-center">
+                        <p class="text-warning">{{ msg }}</p>
+                    </div>
+
                 </div>
             </div>
         </div>

@@ -2,7 +2,7 @@
     "name": "amourao/enfam-app",
     "autoload": {
         "psr-4": {
-            "App\\": "App"
+            "App\\": "app"
         }
     },
     "authors": [

@@ -5,6 +5,7 @@ app.service('httpService', ['$rootScope', '$http', function ($rootScope, $http) 
         $http.get($url)
             .then(function (response) {
                 $rootScope.debug = response.data.length + " registros recebidos de " + $url;
+                //console.log(response.data);
                 response.data.forEach((element) => arr.push(element));
             });
         return arr

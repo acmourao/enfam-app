@@ -13,7 +13,13 @@ abstract class Controller
     protected static function jsonOutput($data)
     {
         header('Content-Type: application/json');
-        echo json_encode($data, JSON_UNESCAPED_LINE_TERMINATORS);
+        echo json_encode($data);
+    }
+
+    protected static function rawOutput($data)
+    {
+        header('Content-Type: application/octet-stream');
+        echo json_encode($data);
     }
 
     protected static function request()

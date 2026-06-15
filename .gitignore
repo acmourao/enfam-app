@@ -1,15 +1,8 @@
 # exclude everything except directory foo/bar
 /*
-!/App
-!/public
-!/mysql
-!/nginx
-!/apache2
-!/php
+!/app
+!/assets
 !.env
-!docker-compose.yml
-!docker-compose-apache.yml
-!docker-compose-ngix.yml
 !.gitignore
 !composer.json
 !package.json

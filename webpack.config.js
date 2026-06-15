@@ -10,7 +10,6 @@ module.exports = {
             './assets/js/services/cadastroService.js',
             './assets/js/controllers/mainController.js',
             './assets/js/controllers/usuarioController.js',
-            './assets/js/modules/angular-locale_pt-br.js',
             './assets/js/modules/directives.js',
             './assets/js/modules/filters.js'
         ]

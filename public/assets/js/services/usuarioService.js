@@ -11,7 +11,7 @@ app.service('usuarioService', ['httpService', function ($httpService) {
     this.save = function ($req) {
         try {
             $httpService.save('/usuario/save', $req);
-            return "OK";
+            return "registro gravado com sucesso!";
         }
         catch (e) {
             console.error(e);

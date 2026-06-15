@@ -10,7 +10,8 @@
         <form ng-submit="salvarUsuario()" class="row g-3 needs-validation">
             <div class="col-md-4">
                 <label for="cpf" class="form-label">CPF</label>
-                <input type="text" cpf-cnpj maxlength="14" class=" form-control" id="cpf" ng-model="usuario.cpf" required>
+                <input type="text" cpf-cnpj maxlength="14" class=" form-control" id="cpf" ng-model="usuario.cpf"
+                    required>
                 <div class="invalid-feedback">
                     forneça um válido cpf com no max 11 caracteres.
                 </div>
@@ -35,7 +36,8 @@
             </div>
             <div class="col-md-6">
                 <label for="telefone" class="form-label">Telefone</label>
-                <input type="text" mask-phone-number maxlength="15" class="form-control" id="telefone" ng-model="usuario.telefone" required>
+                <input type="text" mask-phone-number maxlength="15" class="form-control" id="telefone"
+                    ng-model="usuario.telefone" required>
                 <div class="invalid-feedback">
                     Informe um telefone para contato.
                 </div>
@@ -45,7 +47,7 @@
                 <select ng-model="usuario.remember_token" class="form-select" id="remember_token" required>
                     <option selected disabled value="">:. Selecione .:</option>
                     <option ng-repeat="uf in ufs" value="{{uf.sigla}}">
-                        {{uf.estado}}
+                        {{uf.nome}}
                     </option>
                 </select>
                 <div class="invalid-feedback">
@@ -54,7 +56,8 @@
             </div>
             <div class="col-md-3">
                 <label for="nascimento" class="form-label">Nascimento</label>
-                <input type="date" mysql-date class="form-control" id="nascimento" ng-model="usuario.nascimento" required>
+                <input type="date" mysql-date class="form-control" id="nascimento" ng-model="usuario.nascimento"
+                    required>
                 <div class="invalid-feedback">
                     Informe a data de nascimento.
                 </div>
@@ -71,6 +74,9 @@
                 <button class="btn btn-primary" type="submit">Salvar</button>
             </div>
         </form>
+        <div class="text-center">
+            <p class="text-warning">{{ msg }}</p>
+        </div>
 </main>
 
 <?php include_once '../includes/rodape.php' ?>
