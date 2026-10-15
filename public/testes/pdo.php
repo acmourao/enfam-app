@@ -6,7 +6,7 @@ class UsuarioModel extends stdClass {}
 try {
 
     //$dsn = "mysql:host=172.18.0.1:3306;dbname=educaenfam;charset=UTF8";
-    $dsn = "mysql:host=mysql:3306;dbname=educaenfam;charset=UTF8";
+    $dsn = "mysql:host=127.0.0.1:3306;dbname=educaenfam;charset=UTF8";
     $pdo = new PDO($dsn, 'root', 'root', [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
     $pdo->setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND, "SET NAMES 'utf8'");
 
