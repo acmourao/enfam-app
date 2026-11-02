@@ -7,6 +7,14 @@ use Controller\{
     EstadosController
 };
 
+$uri_parse = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+
+$path = explode('/', ltrim($uri_parse, '/'));
+
+//echo $uri_parse .  "<br><br>";
+//print_r($path);
+//return;
+
 try {
     switch ($uri_parse) {
         // Rotas para serviços de usuários

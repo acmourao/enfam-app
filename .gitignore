@@ -1,17 +1,11 @@
 # exclude everything except directory foo/bar
 /*
-!/apache2
 !/App
-!/mysql
-!/nginx
-!/php
 !/public
 !.env
 !.gitignore
 !composer.json
-!docker-compose-apache.yml
-!docker-compose-nginx.yml
-!docker-compose.yml
 !package.json
 !webpack.config.js
 !README.md
+!*.zip
