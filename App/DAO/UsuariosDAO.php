@@ -14,7 +14,7 @@ class UsuariosDAO extends DAO
      */
     function getAll()
     {
-        return parent::select("SELECT * FROM educaenfam.vwusuarios limit " . $GLOBALS["MAX_LISTA"]);;
+        return parent::select("SELECT * FROM educaenfam.vwusuarios limit " . $GLOBALS["MAX_LISTA"]);
     }
 
     /**

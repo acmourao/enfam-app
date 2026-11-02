@@ -18,8 +18,8 @@ class DAO
     {
         $stmt = self::$db->query($qry);
         $retorno = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        if (isset($_SESSION["debug"]))
-            $retorno[0]["_query"] = $qry;
+        if (isset($GLOBALS["debug"]) && $GLOBALS["debug"] == true)
+            $retorno[0]["_select"] = $qry;
         return $retorno;
     }
 
@@ -28,8 +28,8 @@ class DAO
         $stmt = self::$db->prepare($qry);
         $stmt->execute($param);
         $retorno = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        if (isset($_SESSION["debug"]))
-            $retorno[0]["_query"] = $qry;
+        if (isset($GLOBALS["debug"]) && $GLOBALS["debug"] == true)
+            $retorno[0]["_where"] = $qry;
         return $retorno;
     }
 
@@ -37,7 +37,7 @@ class DAO
     {
         $stmt = self::$db->prepare($qry);
         $retorno = $stmt->execute($param);
-        if (isset($_SESSION["debug"]))
+        if (isset($GLOBALS["debug"]) && $GLOBALS["debug"] == true)
             $retorno = $qry;
         return $retorno;
     }

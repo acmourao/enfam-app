@@ -4,6 +4,6 @@ define("PATH_VIEW", dirname(__FILE__) . '/');
 
 date_default_timezone_set('America/Sao_Paulo');
 
-$MAX_LISTA = 20;
+$MAX_LISTA = 10;
 
-$_SESSION['debug'] = true;
+$debug = true;
